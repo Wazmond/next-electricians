@@ -1,10 +1,11 @@
-import {NavBar} from '@/components/NavBar/NavBar'
+import { Header } from '@/components/Header'
 import React from 'react'
 
 const Page = () => {
   return (
     <div>
-      <NavBar />
+      <Header />
+      <div className='h-screen bg-stone-600'/>
       <h1>Page.tsx</h1>
     </div>
   )

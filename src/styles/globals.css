@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "RobotoSerif";
+  src: url("/fonts/Roboto_Serif/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf") format("truetype-variations");
+  font-weight: 100 900; /* Adjust range based on font's supported weights */
+  font-stretch: 75% 125%; /* Adjust range based on font's supported widths */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
+
+:root {
+  --bg-color-dark: #333;
+  --text-color: #000;
+  --header-text-color: #fff;
+}

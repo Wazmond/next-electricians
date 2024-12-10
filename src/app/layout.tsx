@@ -4,7 +4,7 @@ type LayoutProps = {
   children: ReactNode
 }
 
-import './globals.css'
+import '../styles/globals.css'
 
 const Layout = ({ children }: LayoutProps) => {
   return (
