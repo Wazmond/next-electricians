@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        roboto: ['Roboto', 'arial'],
+        robotoSerif: ['RobotoSerif', 'serif'],
       },
       colors: {
         bgDark: 'var(--bg-color-dark)',
