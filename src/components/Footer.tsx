@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="flex flex-col items-center gap-3 bg-mono-900 py-3">
       {/* <Image src={Logo} alt="logo" objectFit="contain" /> */}
 
-      <h2 className="text-mono-400 tracking-widest font-robotoSerif">NextElectricians</h2>
+      <h2 className="text-mono-400 tracking-widest font-robotoSerif">NextElectricians Pty Ltd</h2>
       <div className="flex flex-row gap-5 text-mono-500 tracking-wider font-robotoSerif">
         <Link href="/" className="group">
           <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
