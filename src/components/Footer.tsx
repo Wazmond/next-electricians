@@ -44,7 +44,11 @@ const Footer = () => {
             className="transition-colors duration-100 ease-in-out group hover:text-mono-50 text-mono-500"
           />
         </Link>
-        <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" className="group">
+        <Link
+          href={'https://www.instagram.com/nextelectricians/'}
+          target="_blank"
+          className="group"
+        >
           <FaInstagram
             size={20}
             className="transition-colors duration-100 ease-in-out group hover:text-mono-50 text-mono-500"

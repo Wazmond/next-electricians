@@ -45,7 +45,7 @@ export const Header = () => {
         <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank">
           <FaGoogle size={30} color={'#fff'} />
         </Link>
-        <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank">
+        <Link href={'https://www.instagram.com/nextelectricians/'} target="_blank">
           <FaInstagram size={30} color={'#fff'} />
         </Link>
         <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank">
