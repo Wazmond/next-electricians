@@ -43,13 +43,13 @@ export const Header = () => {
       </div> */}
       <div className="flex flex-row gap-5 h-12 items-center">
         <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank">
-          <FaGoogle size={30} color={'#fff'} />
+          <FaGoogle size={25} color={'#fff'} />
         </Link>
         <Link href={'https://www.instagram.com/nextelectricians/'} target="_blank">
-          <FaInstagram size={30} color={'#fff'} />
+          <FaInstagram size={25} color={'#fff'} />
         </Link>
         <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank">
-          <FaFacebookF size={30} color={'#fff'} />
+          <FaFacebookF size={25} color={'#fff'} />
         </Link>
       </div>
     </div>
