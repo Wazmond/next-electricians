@@ -102,8 +102,11 @@ export interface Media {
 export interface Project {
   id: number;
   title: string;
-  desciption: string;
+  description: string;
+  date: string;
   image?: (number | null) | Media;
+  featured: boolean;
+  featuredOrder?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -207,8 +210,11 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
-  desciption?: T;
+  description?: T;
+  date?: T;
   image?: T;
+  featured?: T;
+  featuredOrder?: T;
   updatedAt?: T;
   createdAt?: T;
 }
