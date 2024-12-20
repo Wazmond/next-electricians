@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import '../globals.css'
+import { Header } from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +19,11 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
