@@ -32,7 +32,7 @@ const LandingImage = () => {
   return (
     <div className={`relative h-[80vh] w-full overflow-hidden flex flex-row justify-center`}>
       {images && <Image src={images[img]} alt="featuredImage" className="object-cover" />}
-      <div className="h-full w-full absolute z-[5] bg-black opacity-70" />
+      <div className="h-full w-full absolute z-[2] bg-black opacity-70" />
 
       <div className="absolute flex flex-col gap-2 self-end items-center z-10 mb-4">
         <div className="text-mono-500 border border-mono-500 hover:border-white hover:text-white rounded-md px-4">
