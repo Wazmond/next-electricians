@@ -11,18 +11,23 @@ import { FaInstagram } from 'react-icons/fa'
 import { FaFacebookF } from 'react-icons/fa'
 import Link from 'next/link'
 import NavButtons from './header/SmNav'
+import Socials from './header/socials'
 
 export const Header = () => {
-  const [bgState, setBgState] = useState<boolean>(false)
+  const [bgState, setBgState] = useState<number>(0.0)
   const [menuState, setMenuState] = useState<boolean>(false)
 
   useEffect(() => {
-    const transitionValue = 100
-    const scrollValue = window.scrollY
-    if (scrollValue > transitionValue) {
-      setBgState(true)
-    } else {
-      setBgState(false)
+    const handleScroll = () => {
+      const transitionValue = 100
+      const scrollValue = window.scrollY
+      scrollValue < transitionValue ? setBgState(scrollValue / transitionValue) : setBgState(1)
+    }
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
@@ -39,9 +44,15 @@ export const Header = () => {
           <NavButtons redir="projects" title="Projects" setMenuState={setMenuState} />
           <NavButtons redir="contact" title="Contact" setMenuState={setMenuState} />
         </div>
+
+        <div className={`flex flex-row gap-5 self-center my-2`}>
+          <Socials size={25} base={'black'} hovered={'mono-500'} />
+        </div>
       </div>
+
       <div
         className={`fixed z-10 flex flex-row h-16 w-full justify-between items-center md:justify-evenly px-5`}
+        style={{ backgroundColor: `rgba(46, 46, 46, ${bgState}` }}
       >
         <div className={`relative aspect-[174/64] h-12`}>
           <Image src={Logo} alt="logo" fill={true} objectFit="contain" />
@@ -63,37 +74,25 @@ export const Header = () => {
       </div> */}
 
         <div className="hidden md:flex flex-row gap-5 h-12 items-center">
-          <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Google">
-            <FaGoogle size={20} className={`text-white hover:text-mono-500`} />
-          </Link>
-          <Link
-            href={'https://www.instagram.com/nextelectricians/'}
-            target="_blank"
-            aria-label="Instagram"
-          >
-            <FaInstagram size={20} className={`text-white hover:text-mono-500`} />
-          </Link>
-          <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
-            <FaFacebookF size={20} className={`text-white hover:text-mono-500`} />
-          </Link>
+          <Socials size={20} base={'white'} hovered={'mono-500'} />
         </div>
 
         <div
-          className="md:hidden flex flex-col h-12 w-12 items-center justify-evenly hover:cursor-pointer"
+          className={`${!menuState && 'md:hidden'} flex flex-col h-12 w-12 items-center justify-evenly hover:cursor-pointer`}
           aria-label="Menu Button"
         >
           <button
-            className="flex flex-col justify-between h-6 w-8"
+            className="flex flex-col justify-between h-6 w-8 group"
             onClick={() => setMenuState(!menuState)}
           >
             <span
-              className={`${menuState ? 'bg-black' : 'bg-white'} h-0.5 w-8 transition-all ${menuState ? 'rotate-45 translate-y-2.5' : ''}`}
+              className={`${menuState ? 'bg-black' : 'bg-white'} group-hover:bg-mono-500 h-0.5 w-8 transition-all ${menuState ? 'rotate-45 translate-y-2.5' : ''}`}
             />
             <span
-              className={`bg-white h-0.5 w-8 transition-opacity ${menuState ? 'opacity-0' : 'opacity-100'}`}
+              className={`bg-white h-0.5 w-8 transition-all group-hover:bg-mono-500 ${menuState ? 'opacity-0' : 'opacity-100'}`}
             />
             <span
-              className={`${menuState ? 'bg-black' : 'bg-white'} h-0.5 w-8 transition-all ${menuState ? '-rotate-45 -translate-y-2.5' : ''}`}
+              className={`${menuState ? 'bg-black' : 'bg-white'} group-hover:bg-mono-500 h-0.5 w-8 transition-all ${menuState ? '-rotate-45 -translate-y-2.5' : ''}`}
             />
           </button>
         </div>
