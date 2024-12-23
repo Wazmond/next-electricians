@@ -29,9 +29,9 @@ export const Header = () => {
   return (
     <>
       <div
-        className={`absolute z-[9] flex flex-col transform ${menuState ? 'scale-y-100' : 'scale-y-0'} origin-top overflow-hidden w-full bg-white transition-transform duration-150 ease-in-out`}
+        className={`fixed z-[9] flex flex-col transform ${menuState ? 'scale-y-100' : 'scale-y-0'} origin-top overflow-hidden w-full bg-white transition-transform duration-150 ease-in-out`}
       >
-        <span className='h-20 border-b-2 border-mono-500'/>
+        <span className="h-16 border-b-2 border-mono-500" />
         <div>
           <NavButtons redir="" title="Home" setMenuState={setMenuState} />
           <NavButtons redir="about" title="About" setMenuState={setMenuState} />
@@ -41,9 +41,11 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={`fixed z-10 flex flex-row h-16 w-full justify-between md:justify-evenly px-5`}
+        className={`fixed z-10 flex flex-row h-16 w-full justify-between items-center md:justify-evenly px-5`}
       >
-        <Image src={Logo} alt="logo" height={64} />
+        <div className={`relative aspect-[174/64] h-12`}>
+          <Image src={Logo} alt="logo" fill={true} objectFit="contain" />
+        </div>
         <div
           // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
           className="hidden md:flex h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
@@ -62,17 +64,17 @@ export const Header = () => {
 
         <div className="hidden md:flex flex-row gap-5 h-12 items-center">
           <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Google">
-            <FaGoogle size={25} color={'#fff'} />
+            <FaGoogle size={20} className={`text-white hover:text-mono-500`} />
           </Link>
           <Link
             href={'https://www.instagram.com/nextelectricians/'}
             target="_blank"
             aria-label="Instagram"
           >
-            <FaInstagram size={25} color={'#fff'} />
+            <FaInstagram size={20} className={`text-white hover:text-mono-500`} />
           </Link>
           <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
-            <FaFacebookF size={25} color={'#fff'} />
+            <FaFacebookF size={20} className={`text-white hover:text-mono-500`} />
           </Link>
         </div>
 
