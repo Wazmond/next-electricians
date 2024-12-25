@@ -71,7 +71,7 @@ export const Header = () => {
         ref={menuRef}
       >
         <Link className={`relative aspect-[174/64] h-12`} href="/">
-          <Image src={Logo} alt="logo" fill={true} objectFit="contain" />
+          <Image src={Logo} alt="logo" height={48} style={{width: 'auto'}} priority={true} />
         </Link>
         <div
           // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
