@@ -2,7 +2,7 @@ import React from 'react'
 import { FaStar } from 'react-icons/fa'
 
 interface Props {
-    gap: number,
+    gap: string,
     size: number,
     color: string,
 }
