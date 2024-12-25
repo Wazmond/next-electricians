@@ -3,7 +3,7 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div className="h-svh w-screen bg-purple-500">
+    <div className="h-svh w-screen">
       <LandingImage /> {/* Temporary component until I can get PayloadCMS properly setup. too much headache for now. this is a later feature */}
       <h2>Landing</h2>
       {/* Payload image. with a button on btm right to pick different photos and 'check it out' */}
