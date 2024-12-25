@@ -4,10 +4,10 @@ import Logo from 'public/images/logo-transparent-3.png'
 import Image from 'next/image'
 
 import { PiPhoneCallThin } from 'react-icons/pi'
-import HeaderButtons from './header/HeaderButtons'
+import HeaderButtons from './header/headerButtons'
 
 import Link from 'next/link'
-import NavButtons from './header/SmNav'
+import NavButtons from './header/smNav'
 import Socials from './header/socials'
 
 export const Header = () => {
