@@ -60,7 +60,7 @@ export const Header = () => {
           </div>
 
           <div className={`flex flex-row gap-5 self-center my-2`}>
-            <Socials size={25} base={'black'} hovered={'mono-500'} />
+            <Socials size={25} base={'text-black'} hovered={'hover:text-mono-500'} />
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ export const Header = () => {
       </div> */}
 
         <div className="hidden md:flex flex-row gap-5 h-12 items-center">
-          <Socials size={20} base={'white'} hovered={'mono-500'} />
+          <Socials size={20} base={'text-white'} hovered={'hover:text-mono-500'} />
         </div>
 
         <button

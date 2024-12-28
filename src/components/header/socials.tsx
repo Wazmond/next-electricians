@@ -11,17 +11,17 @@ const Socials: React.FC<Props> = (props) => {
   return (
     <>
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Google">
-        <FaGoogle size={props.size} className={`text-${props.base} hover:text-${props.hovered}`} />
+        <FaGoogle size={props.size} className={`${props.base} ${props.hovered}`} />
       </Link>
       <Link
         href={'https://www.instagram.com/nextelectricians/'}
         target="_blank"
         aria-label="Instagram"
       >
-        <FaInstagram size={props.size} className={`text-${props.base} hover:text-${props.hovered}`} />
+        <FaInstagram size={props.size} className={`${props.base} ${props.hovered}`} />
       </Link>
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
-        <FaFacebookF size={props.size} className={`text-${props.base} hover:text-${props.hovered}`} />
+        <FaFacebookF size={props.size} className={`${props.base} ${props.hovered}`} />
       </Link>
     </>
   )
