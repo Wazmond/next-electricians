@@ -5,17 +5,17 @@ import Image from 'next/image'
 interface Props {
   name: string
   profile: string | undefined
-  review: string
+  review: string,
+  className?: string
 }
 
 const ReviewCard = (props: Props) => {
   return (
-    <div className={`flex flex-col rounded-lg md:w-1/4 px-4 py-4 gap-4 shadow-2xl bg-white`}>
+    <div className={`flex flex-col rounded-lg min-w-[50vw] md:min-w-[25vw] px-4 py-4 gap-4 bg-white ${props.className}`} >
       <div className={`flex flex-row gap-4`}>
         {props.profile ? (
           <Image src={props.profile} alt="profilePicture" height={30} width={30} />
         ) : (
-          // <div className='bg-mono-500 h-8 w-8 justify-center items-center'>
           <p
             className={`flex bg-mono-500 text-white h-10 w-10 text-center items-center justify-center rounded-full leading-normal`}
           >

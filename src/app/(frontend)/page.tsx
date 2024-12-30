@@ -5,7 +5,7 @@ import Testimonials from './(home)/testimonials'
 
 const Page = () => {
   return (
-    <div>
+    <div className={`flex flex-col w-screen overflow-hidden`}>
       {/* <div className='h-screen bg-stone-600'/> */}
       <Landing />
       <About />
