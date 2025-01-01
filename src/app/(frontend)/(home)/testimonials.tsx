@@ -5,7 +5,7 @@ import React from 'react'
 const Testimonials = () => {
   return (
     <div
-      className={`flex flex-col justify-center items-center font-robotoSerif py-8 bg-mono-300 w-screen gap-4`}
+      className={`flex flex-col justify-center items-center font-robotoSerif py-8 bg-mono-300 w-full gap-4`}
     >
       <div>
         <h1>{`Trusted by many, here's why`}</h1>

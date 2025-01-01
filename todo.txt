@@ -1,0 +1,7 @@
+- Fix landing image so it fills screen ( has black borders rn )
+- logo change
+- More info button redir's to its respective projects page
+- About section,
+- Projects section
+- Services section
+- footer mobile responsiveness
