@@ -19,7 +19,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">
+      <body className="overflow-y-scroll">
         <Header />
         {children}
         <Footer />
