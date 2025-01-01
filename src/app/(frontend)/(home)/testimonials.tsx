@@ -16,13 +16,22 @@ const Testimonials = () => {
       </div>
 
       <div className="relative w-screen overflow-hidden">
-        <div className='flex flex-row overflow-x-scroll gap-4 justify-center'>
+        <div className="flex flex-row gap-4 justify-center">
           <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} />
-          <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} className="scroll-snap-center"/>
+          <ReviewCard
+            name="John S."
+            review="lorem asdjajldkajdlka"
+            profile={undefined}
+            className="scroll-snap-center"
+          />
           <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} />
         </div>
-        <div className={`absolute h-full w-20 top-0 left-0 bg-gradient-to-r from-mono-300 from-25% to-transparent`}/>
-        <div className={`absolute h-full w-20 top-0 right-0 bg-gradient-to-l from-mono-300 from-25% to-transparent`}/>
+        <div
+          className={` md:hidden absolute h-full w-20 top-0 left-0 bg-gradient-to-r from-mono-300 from-25% to-transparent`}
+        />
+        <div
+          className={` md:hidden absolute h-full w-20 top-0 right-0 bg-gradient-to-l from-mono-300 from-25% to-transparent`}
+        />
       </div>
     </div>
   )
