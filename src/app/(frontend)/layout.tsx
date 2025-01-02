@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     template: '%s | NextElectricians',
   },
   description: 'NextElectricians website',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1.0,
+    viewportFit: 'cover', // For iOS devices with notches
+  },
 }
 
 type LayoutProps = {
