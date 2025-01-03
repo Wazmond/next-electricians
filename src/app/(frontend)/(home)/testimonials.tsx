@@ -27,10 +27,10 @@ const Testimonials = () => {
           <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} />
         </div>
         <div
-          className={` md:hidden absolute h-full w-20 top-0 left-0 bg-gradient-to-r from-mono-300 from-25% to-transparent`}
+          className={` lg:hidden absolute h-full w-20 top-0 left-0 bg-gradient-to-r from-mono-300 from-25% to-transparent`}
         />
         <div
-          className={` md:hidden absolute h-full w-20 top-0 right-0 bg-gradient-to-l from-mono-300 from-25% to-transparent`}
+          className={` lg:hidden absolute h-full w-20 top-0 right-0 bg-gradient-to-l from-mono-300 from-25% to-transparent`}
         />
       </div>
     </div>

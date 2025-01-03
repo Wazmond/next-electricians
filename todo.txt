@@ -5,3 +5,4 @@
 - Projects section
 - Services section
 - footer mobile responsiveness
+- testimonials, onClick, change positiion of review cards, carousel transition
