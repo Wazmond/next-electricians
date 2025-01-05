@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 import '../globals.css'
 import { Header } from '@/components/header'
 import Footer from '@/components/footer'
@@ -10,11 +10,12 @@ export const metadata: Metadata = {
     template: '%s | NextElectricians',
   },
   description: 'NextElectricians website',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1.0,
-    viewportFit: 'cover', // For iOS devices with notches
-  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  viewportFit: 'cover',
 }
 
 type LayoutProps = {

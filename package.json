@@ -15,6 +15,7 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@neondatabase/serverless": "^0.10.4",
     "@payloadcms/db-vercel-postgres": "latest",
     "@payloadcms/next": "latest",
