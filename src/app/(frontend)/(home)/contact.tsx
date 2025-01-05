@@ -14,7 +14,7 @@ const Contact = () => {
     <div className="w-full bg-white font-robotoSerif flex flex-col items-center gap-4 py-12 px-12">
       <h2>Get in touch with NextElectricians</h2>
 
-      <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-4 text-[12px] w-full">
+      <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-4 text-[12px] w-full max-w-lg">
         <InputField state name="name" title="Name" type="text" placeholder='e.g John Smith'/>
         <InputField state name="phone" title="Phone Number" type="tel" placeholder='e.g 0412 345 678' />
         <InputField state name="email" title="Email Address" type="email" placeholder='e.g email.address@example.com'/>
