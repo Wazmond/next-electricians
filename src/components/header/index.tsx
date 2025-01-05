@@ -4,11 +4,11 @@ import Logo from 'public/images/logo-transparent-3.png'
 import Image from 'next/image'
 
 import { PiPhoneCallThin } from 'react-icons/pi'
-import HeaderButtons from './header/headerButtons'
+import HeaderButtons from './headerButtons'
 
 import Link from 'next/link'
-import NavButtons from './header/smNav'
-import Socials from './header/socials'
+import NavButtons from './smNav'
+import Socials from './socials'
 
 export const Header = () => {
   const [bgState, setBgState] = useState<number>(0.0)
@@ -71,7 +71,7 @@ export const Header = () => {
         ref={menuRef}
       >
         <Link className={`relative aspect-[174/64] h-12`} href="/">
-          <Image src={Logo} alt="logo" height={48} style={{width: 'auto'}} priority={true} />
+          <Image src={Logo} alt="logo" height={48} style={{ width: 'auto' }} priority={true} />
         </Link>
         <div
           // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
