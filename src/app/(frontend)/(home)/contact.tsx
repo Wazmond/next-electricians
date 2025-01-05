@@ -1,5 +1,6 @@
 "use client";
 
+import InputField from '@/components/contact/inputFields';
 import { useForm, ValidationError } from '@formspree/react'
 import React from 'react'
 
@@ -10,30 +11,14 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white font-robotoSerif flex flex-col items-center gap-4 py-12 px-12">
       <h2>Get in touch with NextElectricians</h2>
 
-      <form onSubmit={handleSubmit} method="post">
-        <div>
-          <label className="uppercase">Name</label>
-          <input name="name" id="name" type="text" />
-          <ValidationError prefix="name" field="name" errors={state.errors} />
-        </div>
-        <div>
-          <label className="uppercase">Phone Number</label>
-          <input name="phone" id="phone" type="number" />
-          <ValidationError prefix="phone" field="phone" errors={state.errors} />
-        </div>
-        <div>
-          <label className="uppercase">Email Address</label>
-          <input name="email" id="email" type="text" />
-          <ValidationError prefix="email" field="email" errors={state.errors} />
-        </div>
-        <div>
-          <label className="uppercase">Description</label>
-          <input name="desc" id="desc" type="text" />
-          <ValidationError prefix="desc" field="desc" errors={state.errors} />
-        </div>
+      <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-4 text-[12px] w-full">
+        <InputField state name="name" title="Name" type="text" placeholder='e.g John Smith'/>
+        <InputField state name="phone" title="Phone Number" type="tel" placeholder='e.g 0412 345 678' />
+        <InputField state name="email" title="Email Address" type="email" placeholder='e.g email.address@example.com'/>
+        <InputField state name="desc" title="Description" type="text" placeholder='e.g I want my home to look stunning, please do some lighting magic!'/>
         <button type="submit" disabled={state.submitting}>
           Send
         </button>
