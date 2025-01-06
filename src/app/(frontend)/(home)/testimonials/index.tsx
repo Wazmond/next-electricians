@@ -1,4 +1,4 @@
-import ReviewCard from '@/components/testimonials/reviewCard'
+import ReviewCard from './reviewCard'
 import Stars from '@/components/utils/stars'
 import React from 'react'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import InputField from '@/components/contact/inputFields'
+import InputField from '@/app/(frontend)/(home)/contact/inputFields'
 import { useForm, ValidationError } from '@formspree/react'
 import React from 'react'
 
