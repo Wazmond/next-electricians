@@ -18,7 +18,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaRegCircle } from 'react-icons/fa'
 import { FaCircle } from 'react-icons/fa'
 
-const LandingImage = () => {
+const Footer = () => {
   const [img, setImg] = useState<number>(0)
   const [fade, setFade] = useState<boolean>(false)
 
@@ -98,4 +98,4 @@ const LandingImage = () => {
     </div>
   )
 }
-export default LandingImage
+export default Footer
