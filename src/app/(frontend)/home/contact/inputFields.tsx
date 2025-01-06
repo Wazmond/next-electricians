@@ -1,5 +1,4 @@
-import { FieldValues } from '@formspree/core'
-import { TUseForm, ValidationError } from '@formspree/react'
+import { ValidationError } from '@formspree/react'
 import React from 'react'
 
 interface Props {
