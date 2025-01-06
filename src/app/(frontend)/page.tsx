@@ -1,8 +1,8 @@
 import React from 'react'
-import Landing from './home/landing'
-import About from './home/about'
-import Testimonials from './home/testimonials'
-import Contact from './home/contact'
+import Landing from './pages/home/landing'
+import About from './pages/home/about'
+import Testimonials from './pages/home/testimonials'
+import Contact from './pages/home/contact'
 
 const Page = () => {
   return (
