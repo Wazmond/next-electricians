@@ -12,12 +12,12 @@ interface Props {
 const InputField = (props: Props) => {
   return (
     <div className="flex flex-col w-full gap-1">
-      <label className="uppercase">{props.title}</label>
+      <label className="uppercase text-sm">{props.title}</label>
       {props.name == 'desc' ? (
         <textarea
           name={`${props.name}`}
           id={`${props.name}`}
-          className="border py-2 px-4 resize-none"
+          className="border py-2 px-4 resize-none text-sm"
           placeholder={`${props.placeholder}`}
           wrap="soft"
           rows={4}
@@ -27,7 +27,7 @@ const InputField = (props: Props) => {
           name={`${props.name}`}
           id={`${props.name}`}
           type={`${props.type}`}
-          className="border py-2 px-4"
+          className="border py-2 px-4 text-sm"
           placeholder={`${props.placeholder}`}
         />
       )}
