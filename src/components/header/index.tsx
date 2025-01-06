@@ -10,7 +10,7 @@ import Link from 'next/link'
 import NavButtons from './smNav'
 import Socials from './socials'
 
-export const Header = () => {
+const Header = () => {
   const [bgState, setBgState] = useState<number>(0.0)
   const [menuState, setMenuState] = useState<boolean>(false)
   const menuRef = useRef<HTMLDivElement | null>(null)
@@ -112,3 +112,5 @@ export const Header = () => {
     </>
   )
 }
+
+export default Header
