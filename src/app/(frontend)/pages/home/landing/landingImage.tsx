@@ -11,7 +11,7 @@ import Image from 'next/image'
 import Img1 from 'public/images/Contemporary-Bathroom-Lighting-and-Design.webp'
 import Img2 from 'public/images/driveway-lighting-that-match-a-modern-homes-aesthetic.webp'
 import Img3 from 'public/images/gen_inside.webp'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
@@ -28,22 +28,18 @@ const LandingImage = () => {
     setImg((prev) => (prev - 1 + images.length) % images.length)
   }
 
-  const nextImg = () => {
+  const nextImg = useCallback(() => {
     setFade(true)
     setTimeout(() => {
       setImg((prev) => (prev + 1) % images.length)
       setFade(false)
     }, 150)
-  }
+  }, [images.length])
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      nextImg()
-    }, 3000)
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [img])
+    const timer = setTimeout(nextImg, 3000)
+    return () => clearTimeout(timer)
+  }, [nextImg])
 
   return (
     <div
