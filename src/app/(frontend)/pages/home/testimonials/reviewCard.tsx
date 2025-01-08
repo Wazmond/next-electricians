@@ -12,7 +12,7 @@ interface Props {
 const ReviewCard = (props: Props) => {
   return (
     <div
-      className={`w-auto md:w-[350px] flex flex-col rounded-lg p-4 gap-4 bg-white ${props.className}`}
+      className={`w-auto md:w-[350px] flex flex-col rounded-lg p-4 gap-4 bg-white shadow-lg ${props.className}`}
     >
       <div className={`flex flex-row gap-4`}>
         {props.profile ? (
