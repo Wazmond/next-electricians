@@ -3,25 +3,34 @@ import React from 'react'
 import { FaFacebookF, FaGoogle, FaInstagram } from 'react-icons/fa'
 
 interface Props {
-    size: number,
-    base: string,
-    hovered: string,
+  size: number
+  base: string
+  hovered: string
 }
-const Socials: React.FC<Props> = (props) => {
+const Socials = (props: Props) => {
   return (
     <>
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Google">
-        <FaGoogle size={props.size} className={`${props.base} ${props.hovered}`} />
+        <FaGoogle
+          size={props.size}
+          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+        />
       </Link>
       <Link
         href={'https://www.instagram.com/nextelectricians/'}
         target="_blank"
         aria-label="Instagram"
       >
-        <FaInstagram size={props.size} className={`${props.base} ${props.hovered}`} />
+        <FaInstagram
+          size={props.size}
+          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+        />
       </Link>
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
-        <FaFacebookF size={props.size} className={`${props.base} ${props.hovered}`} />
+        <FaFacebookF
+          size={props.size}
+          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+        />
       </Link>
     </>
   )
