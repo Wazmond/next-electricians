@@ -1,5 +1,5 @@
 import ReviewCard from './reviewCard'
-import Stars from '@/components/utils/stars'
+import Stars from '@/components/stars'
 import Link from 'next/link'
 import React from 'react'
 

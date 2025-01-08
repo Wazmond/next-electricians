@@ -1,5 +1,5 @@
 import React from 'react'
-import Stars from '@/components/utils/stars'
+import Stars from '@/components/stars'
 import Image from 'next/image'
 
 interface Props {

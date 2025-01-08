@@ -8,7 +8,7 @@ import HeaderButtons from './headerButtons'
 
 import Link from 'next/link'
 import NavButtons from './smNav'
-import Socials from './socials'
+import Socials from '@/components/socials'
 
 const Header = () => {
   const [bgState, setBgState] = useState<number>(0.0)
