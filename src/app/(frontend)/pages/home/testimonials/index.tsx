@@ -16,7 +16,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="relative w-screen flex px-8 md:px-2 flex-row flex-wrap gap-4 justify-center items-stretch">
+      <div className="relative w-screen flex px-8 md:px-2 flex-row flex-wrap gap-4 md:gap-8 justify-center items-stretch">
         <ReviewCard
           name="Raymond H."
           review="Wonderful electricians. Couldnt recommend them enough they are professional and tidy and fair on pricing! They installed my car charger quick and without any issues! 5 stars"
