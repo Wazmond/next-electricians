@@ -15,22 +15,22 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="relative w-screen overflow-hidden">
-        <div className="flex flex-row gap-4 justify-center">
-          <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} />
-          <ReviewCard
-            name="John S."
-            review="lorem asdjajldkajdlka"
-            profile={undefined}
-            className="scroll-snap-center"
-          />
-          <ReviewCard name="John S." review="lorem asdjajldkajdlka" profile={undefined} />
-        </div>
-        <div
-          className={` lg:hidden absolute h-full w-20 top-0 left-0 bg-gradient-to-r from-mono-300 from-25% to-transparent`}
+      <div className="relative w-screen overflow-hidden flex px-8 md:px-2 flex-row flex-wrap gap-4 justify-center items-stretch">
+        <ReviewCard
+          name="John S."
+          review="Couldn’t recommend Hugh highly enough. Very professional and friendly and would happily use him again."
+          profile={undefined}
         />
-        <div
-          className={` lg:hidden absolute h-full w-20 top-0 right-0 bg-gradient-to-l from-mono-300 from-25% to-transparent`}
+        <ReviewCard
+          name="John S."
+          review="Wonderful electricians. Couldnt recommend them enough they are professional and tidy and fair on pricing! They installed my car charger quick and without any issues! 5 stars"
+          profile={undefined}
+          className="scroll-snap-center"
+        />
+        <ReviewCard
+          name="John S."
+          review="Great customer service from Hugh and Lachlan. I needed a few gpos installed they did an amazing job, very quick and efficient."
+          profile={undefined}
         />
       </div>
     </div>
