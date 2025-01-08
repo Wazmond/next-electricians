@@ -9,10 +9,10 @@ const Contact = () => {
 
   return (
     <div className="w-full bg-white font-robotoSerif flex flex-col items-center gap-4 py-12 px-12">
-      <h2>Get in touch with NextElectricians</h2>
+      <h2 className="text-center">Get in touch with NextElectricians</h2>
 
       {state.succeeded ? (
-        <p>{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
+        <p className='text-center'>{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
       ) : (
         <form
           onSubmit={handleSubmit}
