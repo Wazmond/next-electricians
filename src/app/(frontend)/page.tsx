@@ -3,6 +3,7 @@ import Landing from './pages/home/landing'
 import About from './pages/home/about'
 import Testimonials from './pages/home/testimonials'
 import Contact from './pages/home/contact'
+import Projects from './pages/home/projects'
 
 const Page = () => {
   return (
@@ -11,6 +12,7 @@ const Page = () => {
       <Landing />
       <About />
       <Testimonials />
+      <Projects />
       <Contact />
     </div>
   )
