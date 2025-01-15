@@ -2,34 +2,20 @@ import React from 'react'
 
 const About = () => {
   return (
-    <>
-      <div className="bg-white md:px-12 py-4 border flex flex-col justify-center items-center font-robotoSerif">
-        <h2>Who are we and why us?</h2>
-        <div className="flex flex-row flex-1 gap-4 flex-wrap items-center justify-center">
-          <p className="flex flex-1 bg-mono-200 py-2 px-4 text-wrap">
+    <div className="bg-white gap-6 md:px-12 py-8 border flex flex-col items-center font-robotoSerif">
+      <h2>Who Are We and Why Choose Us?</h2>
+      <div className="flex flex-col md:flex-row max-w-[1112px] w-full gap-8 px-8 md:px-0">
+        <div className="flex-1 bg-mono-200 rounded shadow-md">
+          <p className="text-wrap h-auto w-full">
             {`NextElectricians offers expert domestic and commercial electrical services. From installations to TV and data cabling, we ensure safe, tidy, and high-quality results. Call now for your free quote!`}
           </p>
-          {/* Personal image */}
-          {/* <Image /> */}
-          <div className="flex max-w-[800px]">
-            <span className="h-[750px] w-[1000px] bg-green-900 object-cover" />
-          </div>
+        </div>
+        {/* Placeholder for Image */}
+        <div className="flex-1 md:flex-[2] ">
+          <div className="w-64 h-64 bg-green-900 object-cover rounded-md"></div>
         </div>
       </div>
-
-      <div className="bg-white md:px-12 py-8 border flex flex-col items-center font-robotoSerif">
-        <h2>Who Are We and Why Choose Us?</h2>
-        <div className="flex flex-row flex-wrap max-w-[1112px] gap-6 items-center justify-center">
-          <p className="flex flex-1 bg-mono-200 p-4 rounded shadow-md text-center">
-            {`NextElectricians offers expert domestic and commercial electrical services. From installations to TV and data cabling, we ensure safe, tidy, and high-quality results. Call now for your free quote!`}
-          </p>
-          {/* Placeholder for Image */}
-          <div className="flex flex-1">
-            <div className="w-[1000px] h-[1000px] bg-green-900 object-cover rounded-md"></div>
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   )
 }
 
