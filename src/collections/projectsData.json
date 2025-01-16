@@ -1,0 +1,57 @@
+[
+    {
+        "title": "CCTV Installation for a home",
+        "desc": "CCTV Installation job blah blah blah",
+        "date": "01/01/2025",
+        "image": "/images/cctvimage.jpeg",
+        "featured": true
+    },
+    {
+        "title": "Downlight",
+        "desc": "Installed downlights on a home",
+        "date": "02/02/2025",
+        "image": "/images/downlight.jpg",
+        "featured": true
+    },
+    {
+        "title": "Driveway Lighting job",
+        "desc": "Installed led lighting on a driveway",
+        "date": "03/03/2025",
+        "image": "/images/driveway-lighting-that-match-a-modern-homes-aesthetic.webp",
+        "featured": true
+    },
+    {
+        "title": "Job #4",
+        "desc": "desc for job#4",
+        "date": "04/04/2025",
+        "featured": false
+    },
+    {
+        "title": "Job #5",
+        "desc": "desc for job#5",
+        "date": "05/05/2025",
+        "featured": false
+    },
+    {
+        "title": "Job #6",
+        "desc": "desc for job#6",
+        "date": "06/06/2025",
+        "featured": false
+    },
+    {
+        "title": "Job #7",
+        "desc": "desc for job#7",
+        "date": "07/07/2025",
+        "featured": false
+    },    {
+        "title": "Job #8",
+        "desc": "desc for job#8",
+        "date": "08/08/2025",
+        "featured": false
+    },    {
+        "title": "Job #9",
+        "desc": "desc for job#9",
+        "date": "09/09/2025",
+        "featured": false
+    }
+]
