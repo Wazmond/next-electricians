@@ -2,9 +2,9 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="bg-white gap-6 md:px-12 py-8 border flex flex-col items-center font-robotoSerif">
+    <div className="bg-white gap-6 py-8 border flex flex-col items-center font-robotoSerif max-w-[1112px] w-full self-center">
       <h2>Who Are We and Why Choose Us?</h2>
-      <div className="flex flex-col md:flex-row max-w-[1112px] w-full gap-8 px-8 md:px-0">
+      <div className="flex flex-col md:flex-row gap-8 px-8 md:px-0">
         <div className="flex-1 bg-mono-200 rounded shadow-md">
           <p className="text-wrap h-auto w-full">
             {`NextElectricians offers expert domestic and commercial electrical services. From installations to TV and data cabling, we ensure safe, tidy, and high-quality results. Call now for your free quote!`}
