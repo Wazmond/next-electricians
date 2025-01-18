@@ -1,5 +1,6 @@
 'use client'
 import ProjectCard from '@/components/projectCard'
+import Link from 'next/link'
 import React from 'react'
 import projectsData from 'src/collections/projectsData.json'
 
@@ -18,19 +19,15 @@ const Projects = () => {
   return (
     <div className="bg-white gap-6 py-8 px-8 border flex flex-col self-center w-full items-center font-robotoSerif max-w-[1112px]">
       <h2>Our Previous Projects</h2>
-      <div className="border w-full h-96 flex flex-row flex-wrap gap-4">
+      <div className="w-full flex flex-row flex-wrap gap-4">
         {data.map((data: ProjectsType, key: number) => (
-          <ProjectCard key={key} data={data} />
+            <ProjectCard key={key} data={data} />
         ))}
       </div>
 
-      <button
-        type="button"
-        className="text-white p-4 bg-blue-500"
-        onClick={() => console.log(data)}
-      >
-        Console log button
-      </button>
+      <Link className="w-auto bg-blue-400 text-white py-2 px-4 rounded-lg" href="/projects">
+        View More
+      </Link>
     </div>
   )
 }
