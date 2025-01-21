@@ -8,11 +8,11 @@ const Contact = () => {
   const [state, handleSubmit] = useForm('xkggpblq')
 
   return (
-    <div className="w-full bg-white font-robotoSerif flex flex-col items-center gap-4 py-12 px-12">
+    <div className="w-full max-w-[1178px] px-8 bg-white font-robotoSerif flex flex-col items-center gap-4 py-8">
       <h2 className="text-center">Get in touch with NextElectricians</h2>
 
       {state.succeeded ? (
-        <p className='text-center'>{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
+        <p className="text-center">{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
       ) : (
         <form
           onSubmit={handleSubmit}
