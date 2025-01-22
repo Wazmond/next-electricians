@@ -10,7 +10,7 @@ interface Props {
 const ProjectCard = (props: Props) => {
   return (
     <div
-      className={`w-[calc((100%/2)-8px)] aspect-[4/3] ${props.data.image ? 'flex' : 'hidden'} flex-col rounded-lg shadow-lg border relative overflow-hidden`}
+      className={`aspect-[4/3] ${props.data.image ? 'flex' : 'hidden'} flex-col rounded-lg shadow-lg relative overflow-hidden`}
     >
       <Link href="/projects/">
         <div className="">

@@ -17,11 +17,11 @@ const Projects = () => {
   const data: ProjectsType[] = projectsData
 
   return (
-    <div className="bg-white gap-6 py-8 px-8 border flex flex-col self-center w-full items-center font-robotoSerif max-w-[1112px]">
+    <div className="bg-white gap-6 py-8 flex flex-col self-center w-full items-center font-robotoSerif max-w-[1178px] px-8">
       <h2>Our Previous Projects</h2>
-      <div className="w-full flex flex-row flex-wrap gap-4">
+      <div className="w-full grid grid-cols-2 gap-4">
         {data.map((data: ProjectsType, key: number) => (
-            <ProjectCard key={key} data={data} />
+          <ProjectCard key={key} data={data} />
         ))}
       </div>
 
