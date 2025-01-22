@@ -3,31 +3,31 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div className="hidden sm:flex flex-row gap-5 text-mono-500 tracking-wider font-robotoSerif">
-      <Link href="/" className="group">
-        <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
+    <div className="relative w-full flex flex-row flex-wrap text-mono-500 tracking-wider font-robotoSerif text-center justify-evenly">
+      <Link href="/" className="group w-[calc(33%-1px)]">
+        <h4 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
           Home
-        </h2>
+        </h4>
       </Link>
-      <Link href="/about" className="group">
-        <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
+      <Link href="/about" className="group w-[calc(33%-1px)]">
+        <h4 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
           About
-        </h2>
+        </h4>
       </Link>
-      <Link href="/services" className="group">
-        <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
+      <Link href="/services" className="group w-[calc(33%-1px)]">
+        <h4 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
           Services
-        </h2>
+        </h4>
       </Link>
-      <Link href="/projects" className="group">
-        <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
+      <Link href="/projects" className="group w-[calc(49.5%-1.5px)]">
+        <h4 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
           Projects
-        </h2>
+        </h4>
       </Link>
-      <Link href="/contact" className="group">
-        <h2 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
+      <Link href="/contact" className="group w-[calc(49.5%-1.5px)]">
+        <h4 className="transition-colors duration-100 ease-in-out group hover:text-mono-50">
           Contact
-        </h2>
+        </h4>
       </Link>
     </div>
   )
