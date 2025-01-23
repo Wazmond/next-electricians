@@ -25,7 +25,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <Link className="w-auto bg-blue-400 text-white py-2 px-4 rounded-lg" href="/projects">
+      <Link className="w-auto bg-white drop-shadow-lg py-2 px-4 rounded-lg" href="/projects">
         View More
       </Link>
     </div>
