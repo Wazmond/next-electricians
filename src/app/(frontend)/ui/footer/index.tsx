@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row text-mono-500 gap-4 justify-center">
+      <div className="flex flex-row flex-wrap text-mono-500 gap-2 justify-center">
         <p>© 2025</p>
         <p>NextElectricians Pty Ltd</p>
         <p>ABN: 64 682 401 510</p>
