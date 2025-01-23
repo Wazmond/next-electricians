@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="bg-white gap-6 py-8 border flex flex-col items-center font-robotoSerif max-w-[1178px] px-8 w-full self-center">
+    <div className="gap-6 py-8 flex flex-col items-center font-robotoSerif max-w-[1178px] px-8 w-full self-center">
       <h2>Who Are We and Why Choose Us?</h2>
       <div className="flex flex-col md:flex-row gap-8 px-8 md:px-0">
         <div className="flex-1 bg-mono-200 rounded shadow-md">
