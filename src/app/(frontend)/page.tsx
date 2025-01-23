@@ -4,6 +4,7 @@ import About from './pages/home/about'
 import Testimonials from './pages/home/testimonials'
 import Contact from './pages/home/contact'
 import Projects from './pages/home/projects'
+import HomeServices from './pages/home/services'
 
 const Page = () => {
   return (
@@ -11,8 +12,9 @@ const Page = () => {
       {/* <div className='h-screen bg-stone-600'/> */}
       <Landing />
       <About />
-      <Testimonials />
+      <HomeServices />
       <Projects />
+      <Testimonials />
       <Contact />
     </div>
   )
