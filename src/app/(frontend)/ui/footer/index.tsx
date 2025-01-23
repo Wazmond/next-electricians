@@ -17,7 +17,7 @@ const Footer = () => {
 
         <div className="flex-col text-center text-mono-400">
           <h3 className="text-white underline underline-offset-4 mb-1">Contact Us</h3>
-          <p>ABN: 64 682 401 510</p>
+          <p>Licence: 468948C</p>
           <p>Hugh@NextElectricians.com.au</p>
           <p>Ph: 0435 367 571</p>
         </div>
@@ -28,6 +28,11 @@ const Footer = () => {
             <Socials size={20} base="text-mono-400" hovered="hover:text-mono-50" />
           </div>
         </div>
+      </div>
+      <div className="flex flex-row text-mono-500 gap-4 justify-center">
+        <p>© 2025</p>
+        <p>NextElectricians Pty Ltd</p>
+        <p>ABN: 64 682 401 510</p>
       </div>
     </div>
   )
