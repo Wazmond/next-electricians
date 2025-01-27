@@ -1,4 +1,4 @@
-import { ProjectsType } from '@/app/(frontend)/pages/home/projects'
+import { ProjectsType } from '@/app/(frontend)/(pages)/home/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
