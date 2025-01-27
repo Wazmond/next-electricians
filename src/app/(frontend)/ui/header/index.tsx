@@ -21,9 +21,9 @@ const Header = () => {
         setMenuState(false)
       }
     }
-    window.addEventListener('mousedown', handleClose)
+    window.addEventListener('click', handleClose)
     return () => {
-      window.removeEventListener('mousedown', handleClose)
+      window.removeEventListener('click', handleClose)
     }
   }, [])
 
