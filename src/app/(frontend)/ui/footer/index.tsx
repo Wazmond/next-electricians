@@ -4,7 +4,7 @@ import Socials from '@/components/socials'
 
 const Footer = () => {
   return (
-    <div className="bg-mono-900">
+    <div className="bg-mono-900 flex flex-col">
       {/* <Image src={Logo} alt="logo" objectFit="contain" /> */}
 
       {/* <h3 className="text-mono-400 tracking-widest font-robotoSerif">NextElectricians Pty Ltd</h3> */}
