@@ -1,3 +1,4 @@
+import ContactForm from '@/components/contactForm'
 import React from 'react'
 
 const Page = () => {
@@ -6,7 +7,7 @@ const Page = () => {
       <span className='fixed w-full h-16 bg-[rgba(46,46,46)]'/> 
       <span className='w-full h-16'/>
       <h1>Contact Us</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nesciunt veniam impedit tempore expedita possimus non corrupti, nihil sequi fuga voluptatem repellat sapiente, aliquid corporis inventore iusto harum obcaecati quo?</p>
+      <ContactForm />
 
     </div>
   )
