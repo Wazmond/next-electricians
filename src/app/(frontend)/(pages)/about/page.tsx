@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className='w-full flex flex-1 flex-col'>
+    <div className='flex flex-col flex-1'>
       <span className='fixed w-full h-16 bg-[rgba(46,46,46)]'/> 
       <span className='w-full h-16'/>
       <h1>About Us</h1>
