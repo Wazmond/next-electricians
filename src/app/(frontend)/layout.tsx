@@ -27,8 +27,10 @@ const Layout = ({ children }: LayoutProps) => {
     <html lang="en">
       <body className="flex flex-col overflow-y-scroll bg-mono-50">
         <Header />
+        <main className='flex flex-1 flex-col'>
         {children}
         <Footer />
+        </main>
       </body>
     </html>
   )
