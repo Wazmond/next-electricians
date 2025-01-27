@@ -25,7 +25,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
-      <body className="overflow-y-scroll bg-mono-50">
+      <body className="flex flex-col overflow-y-scroll bg-mono-50">
         <Header />
         {children}
         <Footer />
