@@ -1,10 +1,9 @@
-import { ProjectsType } from '@/app/(frontend)/(pages)/home/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 interface Props {
-  data: ProjectsType
+  data: ProjectsDataType
 }
 
 const ProjectCard = (props: Props) => {
