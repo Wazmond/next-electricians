@@ -56,7 +56,7 @@ const LandingImage = () => {
       <div className="h-full w-full absolute z-[2] bg-black opacity-70" />
 
       <div className="absolute text-white z-[3] self-center text-center">
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+        <h2>We are your NextElectricians!</h2>
       </div>
 
       <div className="absolute flex flex-col gap-2 self-end items-center z-[3] mb-4">
