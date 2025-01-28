@@ -49,7 +49,8 @@ const LandingImage = () => {
         <Image
           src={images[img]}
           alt="featuredImage"
-          className={`object-cover transition-opacity duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
+          fill={true}
+          className={`transition-opacity duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
         />
       )}
 
