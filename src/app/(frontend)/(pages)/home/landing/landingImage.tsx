@@ -24,9 +24,13 @@ const LandingImage = () => {
 
   const images = [Img1, Img2, Img3]
 
-  const prevImg = () => {
-    setImg((prev) => (prev - 1 + images.length) % images.length)
-  }
+  const prevImg = useCallback(() => {
+    setFade(true)
+    setTimeout(() => {
+      setImg((prev) => (prev - 1 + images.length) % images.length)
+      setFade(false)
+    }, 150)
+  }, [images.length])
 
   const nextImg = useCallback(() => {
     setFade(true)
@@ -40,6 +44,11 @@ const LandingImage = () => {
     const timer = setTimeout(nextImg, 3000)
     return () => clearTimeout(timer)
   }, [nextImg])
+
+  useEffect(() => {
+    const timer = setTimeout(prevImg, 3000)
+    return () => clearTimeout(timer)
+  }, [prevImg])
 
   return (
     <div
