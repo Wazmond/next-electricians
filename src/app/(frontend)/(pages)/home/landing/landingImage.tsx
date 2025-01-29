@@ -59,7 +59,7 @@ const LandingImage = () => {
           src={images[img]}
           alt="featuredImage"
           fill={true}
-          className={`transition-opacity duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
+          className={`transition-opacity object-cover duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
         />
       )}
 
