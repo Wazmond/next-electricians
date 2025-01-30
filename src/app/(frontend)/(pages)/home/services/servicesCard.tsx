@@ -9,7 +9,7 @@ interface Props {
 
 const ServicesCard = (props: Props) => {
   return (
-    <div className="bg-white flex flex-col items-center py-4">
+    <div className="bg-white flex flex-col items-center py-4 rounded-lg">
       <div className="border border-sky-600 rounded-full p-2 mb-4">
         <props.icon size={30} className="text-sky-600" />
       </div>
