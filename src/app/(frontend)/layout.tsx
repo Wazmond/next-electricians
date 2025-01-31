@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { Metadata, Viewport } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Header from './ui/header'
 import Footer from './ui/footer'
@@ -26,6 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <body className="flex flex-col overflow-y-scroll bg-mono-50 ">
+        <Analytics />
         <Header />
         <main className="flex flex-1 flex-col">
           {children}
