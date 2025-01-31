@@ -1,3 +1,4 @@
+import CTAButton from '@/components/ctaButton'
 import ReviewCard from './reviewCard'
 import Stars from '@/components/stars'
 import Link from 'next/link'
@@ -35,13 +36,14 @@ const Testimonials = () => {
         />
       </div>
 
-      <Link
-        href="https://g.co/kgs/DXmE18Y"
-        target="_blank"
-        className="bg-white hover:bg-mono-300 transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg"
-      >
-        Click to view more
-      </Link>
+      <CTAButton 
+      href="https://g.co/kgs/DXmE18Y" 
+      target="_blank" 
+      bgColor='white' 
+      hovered="mono-300" 
+      textColor="black" 
+      text="Click to view more"
+      />
     </div>
   )
 }

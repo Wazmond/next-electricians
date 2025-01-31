@@ -24,9 +24,13 @@ const LandingImage = () => {
 
   const images = [Img1, Img2, Img3]
 
-  const prevImg = () => {
-    setImg((prev) => (prev - 1 + images.length) % images.length)
-  }
+  const prevImg = useCallback(() => {
+    setFade(true)
+    setTimeout(() => {
+      setImg((prev) => (prev - 1 + images.length) % images.length)
+      setFade(false)
+    }, 150)
+  }, [images.length])
 
   const nextImg = useCallback(() => {
     setFade(true)
@@ -41,6 +45,11 @@ const LandingImage = () => {
     return () => clearTimeout(timer)
   }, [nextImg])
 
+  useEffect(() => {
+    const timer = setTimeout(prevImg, 3000)
+    return () => clearTimeout(timer)
+  }, [prevImg])
+
   return (
     <div
       className={`relative h-[80vh] w-full overflow-hidden flex flex-row justify-center bg-black`}
@@ -50,7 +59,7 @@ const LandingImage = () => {
           src={images[img]}
           alt="featuredImage"
           fill={true}
-          className={`transition-opacity duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
+          className={`transition-opacity object-cover duration-300 ${fade ? 'opacity-0' : 'opacity-100'}`}
         />
       )}
 
