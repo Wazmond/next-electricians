@@ -9,16 +9,16 @@ interface Props {
   textColor: string
   text: string
 }
-const CTAButton = ( props: Props ) => {
+const CTAButton = (props: Props) => {
   return (
     <Link
-    href={`${props.href}`}
-    target={`${props.target}`}
-    scroll={true}
-    className={`bg-${props.bgColor} hover:bg-${props.hovered} text-${props.textColor} transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg`}
-  >
-    {props.text}
-  </Link>
+      href={`${props.href}`}
+      target={props.target ? props.target : '_self'}
+      scroll={true}
+      className={`bg-${props.bgColor} hover:bg-${props.hovered} text-${props.textColor} transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg`}
+    >
+      {props.text}
+    </Link>
   )
 }
 
