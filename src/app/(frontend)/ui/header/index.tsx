@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from 'public/images/logo-transparent-3.png'
+import Logo from 'public/images/next-logo-white.png'
 import Image from 'next/image'
 
 import { PiPhoneCallThin } from 'react-icons/pi'
@@ -71,7 +71,7 @@ const Header = () => {
         ref={menuRef}
       >
         <Link className={`relative aspect-[174/64] h-12`} href="/">
-          <Image src={Logo} alt="logo" height={48} style={{ width: 'auto' }} priority={true} />
+          <Image src={Logo} alt="logo" className="object-fit" fill={true} priority={true} />
         </Link>
         <div
           // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
