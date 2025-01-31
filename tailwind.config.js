@@ -21,6 +21,7 @@ export default {
         'mono-700': '#515151',
         'mono-800': '#3f3f3f',
         'mono-900': '#2e2e2e',
+        logoBlue: '#38b6ff',
       },
     },
   },
