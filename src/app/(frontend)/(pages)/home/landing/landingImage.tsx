@@ -17,6 +17,8 @@ import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaRegCircle } from 'react-icons/fa'
 import { FaCircle } from 'react-icons/fa'
+import CTAButton from '@/components/ctaButton'
+import Link from 'next/link'
 
 const LandingImage = () => {
   const [img, setImg] = useState<number>(0)
@@ -65,8 +67,13 @@ const LandingImage = () => {
 
       <div className="h-full w-full absolute z-[2] bg-black opacity-70" />
 
-      <div className="absolute text-white z-[3] self-center text-center">
-        <h2>We are your NextElectricians!</h2>
+      <div className="absolute text-white z-[3] self-center text-center gap-2">
+        <h2 className='font-robotoSerif tracking-[1px]'>lorem ipsum something here</h2>
+        <h1 className="font-robotoSerif tracking-[1px] mt-2 mb-4">We are your <span className="font-medium">NextElectricians</span>!</h1>
+        <div className='flex flex-row gap-4 justify-center'>
+          <CTAButton href="#contact" bgColor="blue-500" hovered='blue-300' textColor='white' text="Get in touch now"/>
+          <CTAButton href="#contact" border="border border-white border-2" textColor='white' text="View Projects"/>
+        </div>
       </div>
 
       <div className="absolute flex flex-col gap-2 self-end items-center z-[3] mb-4">
