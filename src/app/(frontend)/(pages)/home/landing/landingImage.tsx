@@ -71,8 +71,8 @@ const LandingImage = () => {
         <h2 className='font-robotoSerif tracking-[1px]'>lorem ipsum something here</h2>
         <h1 className="font-robotoSerif tracking-[1px] mt-2 mb-4">We are your <span className="font-medium">NextElectricians</span>!</h1>
         <div className='flex flex-row gap-4 justify-center'>
-          <CTAButton href="#contact" bgColor="blue-500" hovered='blue-300' textColor='white' text="Get in touch now"/>
-          <CTAButton href="#contact" border="border border-white border-2" textColor='white' text="View Projects"/>
+          <CTAButton href="#contact" className="bg-blue-500 hover:bg-blue-300 text-white" text="Get In Touch Now"/>
+          <CTAButton href="/projects" className="border-white border-2 text-white" text="View Projects"/>
         </div>
       </div>
 

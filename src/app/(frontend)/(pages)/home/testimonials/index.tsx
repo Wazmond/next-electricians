@@ -39,9 +39,7 @@ const Testimonials = () => {
       <CTAButton 
       href="https://g.co/kgs/DXmE18Y" 
       target="_blank" 
-      bgColor='white' 
-      hovered="mono-300" 
-      textColor="black" 
+      className='bg-white hover:bg-mono-300 text-black'
       text="Click to view more"
       />
     </div>

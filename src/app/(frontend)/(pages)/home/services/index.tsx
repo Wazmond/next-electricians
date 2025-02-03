@@ -23,9 +23,7 @@ const HomeServices = () => {
         </div>
         <CTAButton 
       href="#contact" 
-      bgColor='white' 
-      hovered="mono-300" 
-      textColor="black" 
+      className='bg-white hover:bg-mono-300 text-black'
       text="Contact Us"
       />
 
