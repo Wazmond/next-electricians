@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from './nav'
 import Socials from '@/components/socials'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -33,6 +34,15 @@ const Footer = () => {
         <p>© 2025</p>
         <p>NextElectricians Pty Ltd</p>
         <p>ABN: 64 682 401 510</p>
+      </div>
+      <div className="flex flex-row flex-wrap text-mono-500 gap-2 justify-center text-sm">
+        <Link href="/privacyPolicy" className="hover:text-mono-50">
+          Privacy Policy
+        </Link>
+        <span className="h-0 w-2" />
+        <Link href="" className="hover:text-mono-50">
+          Terms and Conditions
+        </Link>
       </div>
     </div>
   )
