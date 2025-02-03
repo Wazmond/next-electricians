@@ -13,7 +13,7 @@ const Socials = (props: Props) => {
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Google">
         <FaGoogle
           size={props.size}
-          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+          className={`transition-colors duration-100 ease-in-out m-2 ${props.base} ${props.hovered}`}
         />
       </Link>
       <Link
@@ -23,13 +23,13 @@ const Socials = (props: Props) => {
       >
         <FaInstagram
           size={props.size}
-          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+          className={`transition-colors duration-100 ease-in-out m-2 ${props.base} ${props.hovered}`}
         />
       </Link>
       <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
         <FaFacebookF
           size={props.size}
-          className={`transition-colors duration-100 ease-in-out ${props.base} ${props.hovered}`}
+          className={`transition-colors duration-100 ease-in-out m-2 ${props.base} ${props.hovered}`}
         />
       </Link>
     </>

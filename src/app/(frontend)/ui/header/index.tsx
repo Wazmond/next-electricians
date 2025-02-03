@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from 'public/images/next-logo-white.png'
+import LogoLight from 'public/images/next-logo-white.png'
+import LogoDark from 'public/images/next-logo.png'
 import Image from 'next/image'
 
 import { PiPhoneCallThin } from 'react-icons/pi'
@@ -59,7 +60,7 @@ const Header = () => {
             <NavButtons redir="contact" title="Contact" setMenuState={setMenuState} />
           </div>
 
-          <div className={`flex flex-row gap-5 self-center my-2`}>
+          <div className={`flex flex-row gap-10 self-center my-2 py-4`}>
             <Socials size={25} base={'text-black'} hovered={'hover:text-mono-500'} />
           </div>
         </div>
@@ -71,7 +72,13 @@ const Header = () => {
         ref={menuRef}
       >
         <Link className={`relative aspect-[174/64] h-12`} href="/">
-          <Image src={Logo} alt="logo" className="object-fit" fill={true} priority={true} />
+          <Image
+            src={menuState ? LogoDark : LogoLight}
+            alt="logo"
+            className="object-fit"
+            fill={true}
+            priority={true}
+          />
         </Link>
         <div
           // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"

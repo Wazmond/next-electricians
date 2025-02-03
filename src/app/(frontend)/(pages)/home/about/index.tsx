@@ -1,18 +1,20 @@
+import Image from 'next/image'
 import React from 'react'
+import aboutPhoto from 'public/images/next-about.jpg'
 
 const About = () => {
   return (
     <div className="gap-6 py-8 flex flex-col items-center font-robotoSerif max-w-[1178px] px-8 w-full self-center">
       <h2>Who Are We and Why Choose Us?</h2>
-      <div className="flex flex-col md:flex-row gap-8 px-8 md:px-0">
-        <div className="flex-1 bg-mono-200 rounded shadow-md">
+      <div className="flex flex-col max-md:items-center md:flex-row gap-8 px-8">
+        <div className="bg-mono-200 rounded shadow-md max-w-[500px] p-4">
           <p className="text-wrap h-auto w-full">
             {`NextElectricians offers expert domestic and commercial electrical services. From installations to TV and data cabling, we ensure safe, tidy, and high-quality results. Call now for your free quote!`}
           </p>
         </div>
         {/* Placeholder for Image */}
-        <div className="flex-1 md:flex-[2] ">
-          <div className="w-64 h-64 bg-green-900 object-cover rounded-md"></div>
+        <div className="border rounded-lg overflow-hidden relative w-full max-w-[375px] h-auto aspect-[3/4]">
+          <Image src={aboutPhoto} alt="Photo of NextElectricians" className="object-cover" fill />
         </div>
       </div>
     </div>

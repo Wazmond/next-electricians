@@ -1,23 +1,37 @@
 [
     {
-        "title": "CCTV Installation for a home",
-        "desc": "CCTV Installation job blah blah blah",
-        "date": "01/01/2025",
-        "image": "/images/cctvimage.jpeg",
+        "title": "Installation of recessed lighting",
+        "desc": "",
+        "date": "02/11/2024",
+        "image": "/images/projects/recessedIndoor/IMG_5112.jpg",
         "featured": true
     },
     {
-        "title": "Downlight",
-        "desc": "Installed downlights on a home",
-        "date": "02/02/2025",
-        "image": "/images/downlight.jpg",
+        "title": "Switchboard Installation",
+        "desc": "",
+        "date": "17/12/2024",
+        "image": "/images/projects/switchboard/IMG_6058.jpg",
         "featured": true
     },
     {
-        "title": "Driveway Lighting job",
-        "desc": "Installed led lighting on a driveway",
-        "date": "03/03/2025",
-        "image": "/images/driveway-lighting-that-match-a-modern-homes-aesthetic.webp",
+        "title": "Installation of TVs",
+        "desc": "Installed and levelled TVs",
+        "date": "03/12/2024",
+        "image": "/images/projects/tvs/tv2.jpg",
+        "featured": true
+    },    
+    {
+        "title": "Installation of TV + back lights",
+        "desc": "",
+        "date": "28/01/2025",
+        "image": "/images/projects/tvWallLighting/IMG_6254.jpg",
+        "featured": true
+    },
+    {
+        "title": "Installation of lights under kitchen cabinets",
+        "desc": "",
+        "date": "15/11/2024",
+        "image": "/images/projects/kitchenLighting.jpg",
         "featured": true
     }
 ]
