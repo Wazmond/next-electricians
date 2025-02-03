@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         roboto: ['Roboto', 'arial'],
+        robotoMono: ['RobotoMono', 'monospace'],
         robotoSerif: ['RobotoSerif', 'serif'],
       },
       colors: {
