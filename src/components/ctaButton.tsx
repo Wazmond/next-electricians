@@ -4,9 +4,7 @@ import React from 'react'
 interface Props {
   href: string
   target?: string
-  bgColor: string
-  hovered: string
-  textColor: string
+  className?: string
   text: string
 }
 const CTAButton = (props: Props) => {
@@ -15,7 +13,7 @@ const CTAButton = (props: Props) => {
       href={`${props.href}`}
       target={props.target ? props.target : '_self'}
       scroll={true}
-      className={`bg-${props.bgColor} hover:bg-${props.hovered} text-${props.textColor} transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg`}
+      className={`${props.className} transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg font-robotoMono`}
     >
       {props.text}
     </Link>

@@ -10,7 +10,7 @@ import CTAButton from '@/components/ctaButton'
 
 const HomeServices = () => {
   return (
-    <div className="w-full h-auto bg-sky-600 flex relative justify-center text-white py-8 px-8">
+    <>
       <div className="w-full max-w-[1178px] flex flex-col items-center gap-4">
         <h2>Our Services</h2>
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-2 rounded-lg">
@@ -23,14 +23,12 @@ const HomeServices = () => {
         </div>
         <CTAButton 
       href="#contact" 
-      bgColor='white' 
-      hovered="mono-300" 
-      textColor="black" 
+      className='bg-white hover:bg-mono-300 text-black'
       text="Contact Us"
       />
 
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +16,13 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/Roboto/Roboto-Regular.ttf');
+  src: url('/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('/fonts/RobotoMono/RobotoMono-VariableFont_wght.ttf');
   font-display: swap;
 }
 
@@ -36,6 +44,8 @@
   }
   p {
     @apply text-sm;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
   }
 }
 

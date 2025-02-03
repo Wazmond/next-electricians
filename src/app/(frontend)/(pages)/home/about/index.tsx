@@ -4,7 +4,7 @@ import aboutPhoto from 'public/images/next-about.jpg'
 
 const About = () => {
   return (
-    <div className="gap-6 py-8 flex flex-col items-center font-robotoSerif max-w-[1178px] px-8 w-full self-center">
+    <>
       <h2>Who Are We and Why Choose Us?</h2>
       <div className="flex flex-col max-md:items-center md:flex-row gap-8 px-8">
         <div className="bg-mono-200 rounded shadow-md max-w-[500px] p-4">
@@ -17,7 +17,7 @@ const About = () => {
           <Image src={aboutPhoto} alt="Photo of NextElectricians" className="object-cover" fill />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
