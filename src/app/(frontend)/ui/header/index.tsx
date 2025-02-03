@@ -60,7 +60,7 @@ const Header = () => {
             <NavButtons redir="contact" title="Contact" setMenuState={setMenuState} />
           </div>
 
-          <div className={`flex flex-row gap-5 self-center my-2`}>
+          <div className={`flex flex-row gap-10 self-center my-2 py-4`}>
             <Socials size={25} base={'text-black'} hovered={'hover:text-mono-500'} />
           </div>
         </div>
