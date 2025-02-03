@@ -6,9 +6,7 @@ import React from 'react'
 
 const Testimonials = () => {
   return (
-    <div
-      className={`flex flex-col justify-center items-center font-robotoSerif py-8 bg-sky-600 w-full gap-4`}
-    >
+    <>
       <div>
         <h2 className="text-white">{`Trusted by many, here's why`}</h2>
         <div className={`flex flex-row justify-center items-center gap-2`}>
@@ -42,7 +40,7 @@ const Testimonials = () => {
       className='bg-white hover:bg-mono-300 text-black'
       text="Click to view more"
       />
-    </div>
+    </>
   )
 }
 
