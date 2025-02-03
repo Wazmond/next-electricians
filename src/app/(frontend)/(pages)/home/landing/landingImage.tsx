@@ -8,9 +8,9 @@
 // }
 'use client'
 import Image from 'next/image'
-import Img1 from 'public/images/Contemporary-Bathroom-Lighting-and-Design.webp'
-import Img2 from 'public/images/driveway-lighting-that-match-a-modern-homes-aesthetic.webp'
-import Img3 from 'public/images/gen_inside.webp'
+import Img1 from 'public/images/projects/recessedIndoor/IMG_5104.jpg'
+import Img2 from 'public/images/projects/tvWallLighting/IMG_5579.jpg'
+import Img3 from 'public/images/projects/tvs/tv1.jpg'
 import { useCallback, useEffect, useState } from 'react'
 
 import { MdKeyboardArrowLeft } from 'react-icons/md'
