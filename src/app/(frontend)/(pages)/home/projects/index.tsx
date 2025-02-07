@@ -1,6 +1,5 @@
 import CTAButton from '@/components/ctaButton'
 import ProjectsComponent from '@/components/projectsComponent'
-import Link from 'next/link'
 import React from 'react'
 
 const Projects = () => {
@@ -10,10 +9,13 @@ const Projects = () => {
     <>
       <h2>Our Previous Projects</h2>
       <ProjectsComponent />
-      <CTAButton href="/projects" text='View More' className='bg-white hover:bg-mono-300 text-black'/>
+      <CTAButton
+        href="/projects"
+        text="View More"
+        className="bg-white hover:bg-mono-300 text-black"
+      />
     </>
   )
 }
 
 export default Projects
- 
