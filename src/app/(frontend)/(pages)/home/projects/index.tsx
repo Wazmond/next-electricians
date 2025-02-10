@@ -7,12 +7,13 @@ const Projects = () => {
 
   return (
     <>
-      <h2>Our Previous Projects</h2>
+      <h2 className='font-robotoSerif'>Our Previous Projects</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis nostrum consequatur magnam, libero reiciendis iusto impedit fuga officiis possimus harum tenetur voluptas sequi similique placeat, autem doloribus alias at nihil.</p>
       <ProjectsComponent />
       <CTAButton
         href="/projects"
         text="View More"
-        className="bg-white hover:bg-mono-300 text-black"
+        className="bg-white hover:bg-mono-300 text-black border border-mono-500"
       />
     </>
   )

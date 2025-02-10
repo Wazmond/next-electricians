@@ -13,7 +13,7 @@ const HomeServices = () => {
     <>
       <div className="w-full max-w-[1178px] flex flex-col items-center gap-4">
         <h2 className="font-robotoSerif">Our Services</h2>
-        {/* <p></p> */}
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quas eveniet iusto impedit harum architecto optio tempora. Voluptatum praesentium asperiores, sapiente, culpa repellat mollitia velit cupiditate quae dolorum, eum amet.</p>
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-2 rounded-lg">
           <ServicesCard title="Maintenance" icon={SlWrench} />
           <ServicesCard title="Home Automation" icon={VscRobot} />
