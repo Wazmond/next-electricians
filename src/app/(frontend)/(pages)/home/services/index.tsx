@@ -12,7 +12,8 @@ const HomeServices = () => {
   return (
     <>
       <div className="w-full max-w-[1178px] flex flex-col items-center gap-4">
-        <h2>Our Services</h2>
+        <h2 className="font-robotoSerif">Our Services</h2>
+        {/* <p></p> */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-2 rounded-lg">
           <ServicesCard title="Maintenance" icon={SlWrench} />
           <ServicesCard title="Home Automation" icon={VscRobot} />
@@ -21,12 +22,7 @@ const HomeServices = () => {
           <ServicesCard title="Fault Find & Rectification" icon={RxMagnifyingGlass} />
           <ServicesCard title="Surge Protection" icon={RiShieldFlashLine} />
         </div>
-        <CTAButton 
-      href="#contact" 
-      className='bg-white hover:bg-mono-300 text-black'
-      text="Contact Us"
-      />
-
+        <CTAButton href="#contact" className="bg-blue-500 hover:bg-blue-300 text-white" text="Get a Quote"/>
       </div>
     </>
   )
