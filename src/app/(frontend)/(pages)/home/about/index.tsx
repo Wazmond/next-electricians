@@ -5,7 +5,7 @@ import aboutPhoto from 'public/images/next-about.jpg'
 const About = () => {
   return (
     <>
-      <h2>Who Are We and Why Choose Us?</h2>
+      <h2 className='font-robotoSerif'>Who Are We and Why Choose Us?</h2>
       <div className="flex flex-col max-md:items-center md:flex-row gap-8 px-8">
         <div className="bg-mono-200 rounded shadow-md max-w-[500px] p-4">
           <p className="text-wrap h-auto w-full">

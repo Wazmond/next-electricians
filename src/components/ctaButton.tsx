@@ -13,7 +13,7 @@ const CTAButton = (props: Props) => {
       href={`${props.href}`}
       target={props.target ? props.target : '_self'}
       scroll={true}
-      className={`${props.className} transition-colors duration-100 ease-in-out p-2 rounded-lg shadow-lg font-robotoMono`}
+      className={`${props.className} transition-colors duration-100 ease-in-out p-2 px-4 rounded-lg shadow-lg font-robotoMono`}
     >
       {props.text}
     </Link>

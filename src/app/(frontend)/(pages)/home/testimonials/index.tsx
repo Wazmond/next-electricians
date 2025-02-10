@@ -1,17 +1,16 @@
 import CTAButton from '@/components/ctaButton'
 import ReviewCard from './reviewCard'
 import Stars from '@/components/stars'
-import Link from 'next/link'
 import React from 'react'
 
 const Testimonials = () => {
   return (
     <>
-      <div>
-        <h2 className="text-white">{`Trusted by many, here's why`}</h2>
+      <div className='text-black font-robotoSerif'>
+        <h2>{`Trusted by many, here's why`}</h2>
         <div className={`flex flex-row justify-center items-center gap-2`}>
           <Stars size={12} color={'#ffd250'} gap={'[2px]'} />
-          <p className={`text-sm text-white`}>5.0 rating of 9 reviews</p>
+          <p className={`text-sm font-robotoSerif`}>5.0 rating of 9 reviews</p>
         </div>
       </div>
 
@@ -37,8 +36,8 @@ const Testimonials = () => {
       <CTAButton 
       href="https://g.co/kgs/DXmE18Y" 
       target="_blank" 
-      className='bg-white hover:bg-mono-300 text-black'
-      text="Click to view more"
+      className='bg-white hover:bg-mono-300 text-black border border-mono-500'
+      text="View More"
       />
     </>
   )
