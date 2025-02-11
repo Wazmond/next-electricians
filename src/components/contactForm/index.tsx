@@ -4,7 +4,7 @@ import InputField from './inputFields'
 import { useForm } from '@formspree/react'
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm('xvgzqrry')
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_KEY as string)
 
   return (
     <>
