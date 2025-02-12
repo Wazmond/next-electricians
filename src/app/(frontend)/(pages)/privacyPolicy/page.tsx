@@ -67,7 +67,6 @@ const Page = () => {
         <h3>Privacy Policy Complaints and Enquiries</h3>
         <p>If you have any queries or complaints about our Privacy Policy please contact us at:</p>
         <p>
-        1/24-28 Cressy Rd Ryde NSW 2112<br />
         hugh@nextelectricians.com.au<br />
         0435 367 571
         </p>
