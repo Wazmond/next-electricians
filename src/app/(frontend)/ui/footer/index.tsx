@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex-col text-center text-mono-400">
           <h3 className="text-white underline underline-offset-4 mb-1">Contact Us</h3>
           <p>Licence: 468948C</p>
-          <p>Hugh@NextElectricians.com.au</p>
+          <p>admin@NextElectricians.com.au</p>
           <p>Ph: 0435 367 571</p>
         </div>
 

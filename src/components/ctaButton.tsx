@@ -6,6 +6,7 @@ interface Props {
   target?: string
   className?: string
   text: string
+  props?: string
 }
 const CTAButton = (props: Props) => {
   return (

@@ -16,11 +16,12 @@ const HomeServices = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quas eveniet iusto impedit harum architecto optio tempora. Voluptatum praesentium asperiores, sapiente, culpa repellat mollitia velit cupiditate quae dolorum, eum amet.</p>
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-2 rounded-lg">
           <ServicesCard title="Maintenance" icon={SlWrench} />
-          <ServicesCard title="Home Automation" icon={VscRobot} />
+          <ServicesCard title="Intelligent Lighting Solutions" icon={VscRobot} />
           <ServicesCard title="Power, Lights & Cabling" icon={HiOutlineLightBulb} />
           <ServicesCard title="Energy Saving Solutions" icon={RxLightningBolt} />
           <ServicesCard title="Fault Find & Rectification" icon={RxMagnifyingGlass} />
-          <ServicesCard title="Surge Protection" icon={RiShieldFlashLine} />
+          <ServicesCard title="Data Cabling" icon={RiShieldFlashLine} />
+          <ServicesCard title="CCTV Installations" icon={RiShieldFlashLine} />
         </div>
         <CTAButton href="#contact" className="bg-blue-500 hover:bg-blue-300 text-white" text="Get a Quote"/>
       </div>
