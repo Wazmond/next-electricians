@@ -5,11 +5,13 @@ import aboutPhoto from 'public/images/next-about.jpg'
 const About = () => {
   return (
     <>
-      <h2 className='font-robotoSerif'>Who Are We and Why Choose Us?</h2>
+      <h2 className="font-robotoSerif">Who Are We and Why Choose Us?</h2>
       <div className="flex flex-col max-md:items-center md:flex-row gap-8 px-8">
         <div className="bg-mono-200 rounded shadow-md max-w-[500px] p-4">
           <p className="text-wrap h-auto w-full">
-            {`NextElectricians offers expert domestic and commercial electrical services. From installations to TV and data cabling, we ensure safe, tidy, and high-quality results. Call now for your free quote!`}
+            {`We’re Lachlan and Hugh - licensed electricians with over five years of experience working with commercial projects, including solar and data installations. 
+            Now, we’re bringing our expertise to homes and businesses, helping you create spaces with professional lighting, cabling, and electrical solutions. 
+            Our goal is to provide high-quality electrical services that enhance your space while ensuring safety and efficiency. We take pride in every project we complete. `}
           </p>
         </div>
         {/* Placeholder for Image */}

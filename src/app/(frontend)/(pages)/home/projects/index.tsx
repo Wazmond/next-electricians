@@ -7,8 +7,10 @@ const Projects = () => {
 
   return (
     <>
-      <h2 className='font-robotoSerif'>Our Previous Projects</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis nostrum consequatur magnam, libero reiciendis iusto impedit fuga officiis possimus harum tenetur voluptas sequi similique placeat, autem doloribus alias at nihil.</p>
+      <h2 className='font-robotoSerif'>Our Work</h2>
+      <p>{`At Next Electricians, we take pride in our work. Every project is completed with attention to detail and care, 
+      treating your home as if it were our own. No matter the size of the job, we ensure professionalism, respect, and 
+      high-quality work from start to finish. See some of our recent protects below:`}</p>
       <ProjectsComponent />
       <CTAButton
         href="/projects"
