@@ -26,7 +26,7 @@ const Socials = (props: Props) => {
           className={`transition-colors duration-100 ease-in-out m-2 ${props.base} ${props.hovered}`}
         />
       </Link>
-      <Link href={'https://g.co/kgs/DXmE18Y'} target="_blank" aria-label="Facebook">
+      <Link href={'https://www.facebook.com/profile.php?id=61573393100831'} target="_blank" aria-label="Facebook">
         <FaFacebookF
           size={props.size}
           className={`transition-colors duration-100 ease-in-out m-2 ${props.base} ${props.hovered}`}
