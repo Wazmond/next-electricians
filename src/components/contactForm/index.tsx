@@ -43,7 +43,7 @@ const ContactForm = () => {
             disabled={state.submitting}
             className="w-auto bg-blue-500 hover:bg-blue-300 text-white transition-colors duration-100 ease-in-out p-2 px-4 rounded-lg shadow-lg font-robotoMono"
           >
-            {state.submitting ? 'Submitting...' : 'Get a callback'}
+            {state.submitting ? 'Submitting...' : 'Enquire Now!'}
           </button>
         </form>
       )}
