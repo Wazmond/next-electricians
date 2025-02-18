@@ -13,7 +13,7 @@ const Page = () => {
       <section className="relative h-[80vh] w-full overflow-hidden flex flex-row justify-center bg-black">
         <Landing />
       </section>
-      <section className="gap-6 py-8 flex flex-col items-center max-w-[1178px] px-8 w-full self-center">
+      <section className="w-full gap-6 py-8 flex flex-col items-center max-w-[1178px] px-8 self-center">
         <About />
       </section>
       <section className="w-full h-auto bg-mono-200 flex relative justify-center text-black py-8 px-8">
