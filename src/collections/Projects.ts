@@ -19,6 +19,12 @@ export const Projects: CollectionConfig = {
         {
             name: 'date',
             type: 'date',
+            admin: {
+                date: {
+                    pickerAppearance: "dayOnly",
+                    displayFormat: "dd/MM/yyy"
+                },
+            },
             required: true,
             label: 'Project Date',
         },
@@ -27,7 +33,7 @@ export const Projects: CollectionConfig = {
             type: 'upload',
             relationTo: 'media',
             label: 'Photos',
-            required: false,
+            required: true,
         },
         {
             name: 'featured',

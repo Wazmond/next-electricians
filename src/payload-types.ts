@@ -108,7 +108,7 @@ export interface Project {
   title: string;
   description: string;
   date: string;
-  image?: (number | null) | Media;
+  image: number | Media;
   featured: boolean;
   featuredOrder?: number | null;
   updatedAt: string;
