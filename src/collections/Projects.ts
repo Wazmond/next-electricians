@@ -3,6 +3,7 @@ import { CollectionConfig } from "payload";
 export const Projects: CollectionConfig = {
     access: {read: () => true},
     slug: 'projects',
+    defaultSort: ['-date'],
     fields: [
         {
             name: 'title',
