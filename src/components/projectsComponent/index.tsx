@@ -1,14 +1,29 @@
 import React from 'react'
-import projectsData from 'src/collections/projectsData.json'
 import ProjectCard from './projectCard'
+import { payload } from '@/hooks/payload'
+import { Project } from '@/payload-types'
 
-const ProjectsComponent = () => {
+const ProjectsComponent = async () => {
+  const response = await payload.find({
+    collection: "projects"
+  })
+  const projects = response.docs
   return (
-    <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
-      {projectsData.map((data: ProjectsDataType, key: number) => (
-        <ProjectCard key={key} data={data} />
-      ))}
-    </div>
+    <>
+    {projects ? (    
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
+        {projects.map((data: Project) => (
+          <ProjectCard key={data.id} data={data} />
+        ))}
+      </div>
+    ) : (
+      <p className='text-mono-500'>
+        Loading projects...
+      </p>
+    )}
+
+    </>
+
   )
 }
 
