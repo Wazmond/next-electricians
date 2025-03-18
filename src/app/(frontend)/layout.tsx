@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     template: '%s | NextElectricians',
   },
   description: 'NextElectricians website',
+  icons: {
+    icon: '/public/images/favicon.ico'
+  } 
+    
 }
 
 export const viewport: Viewport = {
