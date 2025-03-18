@@ -2,12 +2,27 @@ import React from 'react'
 import ProjectCard from './projectCard'
 import { payload } from '@/hooks/payload'
 import { Project } from '@/payload-types'
+import { unstable_cache } from 'next/cache'
 
 const ProjectsComponent = async () => {
-  const response = await payload.find({
-    collection: "projects"
-  })
-  const projects = response.docs
+  // const { docs } = await payload.find({
+  //   collection: "projects"
+  // })
+  const cached = unstable_cache(
+    async () => {
+      const { docs } = await payload.find({
+        collection: "projects"
+      })
+      return docs
+    }, 
+    [], 
+    {
+      revalidate: 60
+    }
+  ) 
+
+  const projects = await cached()
+  
   return (
     <>
     {projects ? (    

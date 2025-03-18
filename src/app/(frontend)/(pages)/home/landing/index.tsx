@@ -65,7 +65,7 @@ const LandingImage = () => {
       <div className="h-full w-full absolute z-[2] bg-black opacity-70" />
 
       <div className="absolute text-white z-[3] self-center text-center gap-2">
-        <h2 className='font-robotoSerif tracking-[1px]'>Licenced local electricians providing high-quality work</h2>
+        <h2 className='font-robotoSerif tracking-[1px]'>Licensed local electricians providing high-quality work</h2>
         <h1 className="font-robotoSerif tracking-[1px] mt-2 mb-4">We are your <span className="font-medium">NextElectricians</span>!</h1>
         <div className='flex flex-row gap-4 justify-center'>
           <CTAButton href="#contact" className="bg-blue-500 hover:bg-blue-300 text-white" text="Get In Touch Now"/>
