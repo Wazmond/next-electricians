@@ -29,10 +29,22 @@ export const Projects: CollectionConfig = {
             required: true,
             label: 'Project Date',
         },
+        // {
+        //     name: 'image',
+        //     type: 'upload',
+        //     relationTo: 'media',
+        //     label: 'Photos',
+        //     required: true,
+        // },
         {
-            name: 'image',
-            type: 'upload',
-            relationTo: 'media',
+            name: 'images',
+            type: 'array',
+            fields: [{
+                name: 'image',
+                type: 'upload',
+                relationTo: 'media'
+            }
+            ],
             label: 'Photos',
             required: true,
         },
