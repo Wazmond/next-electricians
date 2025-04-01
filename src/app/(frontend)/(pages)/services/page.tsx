@@ -8,6 +8,9 @@ const Page = () => {
       <div className="w-full max-w-[1178px] self-center p-8 flex flex-col gap-4 text-center">
         <h1>Our Services</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nesciunt veniam impedit tempore expedita possimus non corrupti, nihil sequi fuga voluptatem repellat sapiente, aliquid corporis inventore iusto harum obcaecati quo?</p>        
+        {/* <div className=''>
+          Make it a grid element and render the <ServicesCard /> component
+        </div> */}
       </div>
 
 
