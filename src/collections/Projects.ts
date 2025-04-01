@@ -29,13 +29,6 @@ export const Projects: CollectionConfig = {
             required: true,
             label: 'Project Date',
         },
-        // {
-        //     name: 'image',
-        //     type: 'upload',
-        //     relationTo: 'media',
-        //     label: 'Photos',
-        //     required: true,
-        // },
         {
             name: 'images',
             type: 'array',
@@ -47,22 +40,6 @@ export const Projects: CollectionConfig = {
             ],
             label: 'Photos',
             required: true,
-        },
-        {
-            name: 'featured',
-            type: 'checkbox',
-            label: 'Featured',
-            required: true,
-            defaultValue: false,
-        },
-        {
-            name: 'featuredOrder',
-            type: 'number',
-            label: 'Featured Order',
-            required: false,
-            admin: {
-                condition: (data) => data.featured === true,
-            },
         },
     ]
 }
