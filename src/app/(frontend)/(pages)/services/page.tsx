@@ -1,6 +1,25 @@
+// import { payload } from '@/hooks/payload'
+// import { unstable_cache } from 'next/cache'
 import React from 'react'
 
 const Page = () => {
+
+    // const cached = unstable_cache(
+    //   async () => {
+    //     const res = await payload.find({
+    //       collection: "services"
+    //     })
+    //     return res
+    //   }, 
+    //   [], 
+    //   {
+    //     revalidate: 60
+    //   }
+    // ) 
+
+    // const services = await cached()
+
+    // console.log(services)
   return (
     <div className='flex flex-col flex-1'>
       <span className='fixed w-full h-16 bg-[rgba(46,46,46)]'/> 
