@@ -2,7 +2,7 @@
 import { vercelPostgresAdapter } from '@payloadcms/db-vercel-postgres'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-// import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -26,6 +26,7 @@ export default buildConfig({
   },
   collections: [Featured, Users, Media, Projects, Services],
   editor: lexicalEditor(),
+  email: nodemailerAdapter(),
   secret: process.env.NEXT_PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
