@@ -19,13 +19,12 @@ const ProjectCard = (props: Props) => {
   }
   return (
     <div
-      className={`aspect-[4/3] ${data.image ? 'flex' : 'hidden'} flex-col rounded-lg shadow-lg relative overflow-hidden`}
+      className={`aspect-[4/3] ${data.images ? 'flex' : 'hidden'} flex-col rounded-lg shadow-lg relative overflow-hidden`}
     >
       {/* <Link href="/projects/"> */}
       <div className="">
-        <Image src={(data.image as Media).url!} alt="Project Photo" fill={true} className="object-cover" />
+        <Image src={(data.images[0]?.image as Media).url!} alt="Project Photo" fill={true} className="object-cover" />
       </div>
-
       <div className="hidden absolute sm:flex hover:opacity-100 opacity-0 transform transition-opacity duration-150 ease-in-out h-full w-full z-[5] bg-mono-200 bg-opacity-90 py-8 px-8 text-center justify-between flex-col">
         <h3>{data.title}</h3>
         <p>{data.description}</p>

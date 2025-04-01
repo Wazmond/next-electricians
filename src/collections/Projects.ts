@@ -30,27 +30,16 @@ export const Projects: CollectionConfig = {
             label: 'Project Date',
         },
         {
-            name: 'image',
-            type: 'upload',
-            relationTo: 'media',
+            name: 'images',
+            type: 'array',
+            fields: [{
+                name: 'image',
+                type: 'upload',
+                relationTo: 'media'
+            }
+            ],
             label: 'Photos',
             required: true,
-        },
-        {
-            name: 'featured',
-            type: 'checkbox',
-            label: 'Featured',
-            required: true,
-            defaultValue: false,
-        },
-        {
-            name: 'featuredOrder',
-            type: 'number',
-            label: 'Featured Order',
-            required: false,
-            admin: {
-                condition: (data) => data.featured === true,
-            },
         },
     ]
 }

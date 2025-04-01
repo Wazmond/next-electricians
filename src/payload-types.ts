@@ -159,7 +159,10 @@ export interface Project {
   title: string;
   description: string;
   date: string;
-  image: number | Media;
+  images: {
+    image?: (number | null) | Media;
+    id?: string | null;
+  }[];
   featured: boolean;
   featuredOrder?: number | null;
   updatedAt: string;
@@ -267,7 +270,12 @@ export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
   description?: T;
   date?: T;
-  image?: T;
+  images?:
+    | T
+    | {
+        image?: T;
+        id?: T;
+      };
   featured?: T;
   featuredOrder?: T;
   updatedAt?: T;

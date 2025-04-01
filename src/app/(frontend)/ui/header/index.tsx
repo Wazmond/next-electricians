@@ -4,7 +4,6 @@ import LogoLight from 'public/images/next-logo-white.png'
 import LogoDark from 'public/images/next-logo.png'
 import Image from 'next/image'
 
-import { PiPhoneCallThin } from 'react-icons/pi'
 import HeaderButtons from './headerButtons'
 
 import Link from 'next/link'
@@ -67,11 +66,11 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed z-10 flex flex-row h-16 w-full justify-between items-center md:justify-evenly px-5`}
+        className={`fixed z-10 flex flex-row h-20 w-full justify-between items-center md:justify-evenly px-5`}
         style={{ backgroundColor: `rgba(46, 46, 46, ${menuState ? '0' : bgState}` }}
         ref={menuRef}
       >
-        <Link className={`relative aspect-[174/64] h-12`} href="/">
+        <Link className={`relative aspect-[174/64] h-16`} href="/">
           <Image
             src={menuState ? LogoDark : LogoLight}
             alt="logo"
@@ -81,8 +80,7 @@ const Header = () => {
           />
         </Link>
         <div
-          // className=" md:flex transition-all duration-300 ease-in-out w-0 overflow-hidden md:w-[386.8px] h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
-          className="hidden md:flex h-12 gap-5 text-sm tracking-widest align-middle font-robotoSerif"
+          className="hidden md:flex h-16 gap-8 text-lg tracking-widest align-middle font-robotoSerif"
           style={{ color: 'var(--header-text-color)' }}
         >
           <HeaderButtons title="Home" page="" />
@@ -91,13 +89,9 @@ const Header = () => {
           <HeaderButtons title="Projects" page="projects" />
           <HeaderButtons title="Contact" page="contact" />
         </div>
-        {/* <div className="flex flex-row h-12 text-sm tracking-widest items-center">
-        <PiPhoneCallThin size={30} color={'#fff'} />
-        <h2 className="text-headerText align-middle font-robotoSerif">+61 400 000 000</h2>
-      </div> */}
 
         <div className="hidden md:flex flex-row gap-5 h-12 items-center">
-          <Socials size={20} base={'text-white'} hovered={'hover:text-mono-500'} />
+          <Socials size={24} base={'text-white'} hovered={'hover:text-mono-500'} />
         </div>
 
         <button
