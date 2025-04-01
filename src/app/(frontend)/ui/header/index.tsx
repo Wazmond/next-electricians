@@ -31,7 +31,11 @@ const Header = () => {
     const handleScroll = () => {
       const transitionValue = 100
       const scrollValue = window.scrollY
-      scrollValue < transitionValue ? setBgState(scrollValue / transitionValue) : setBgState(1)
+      if (scrollValue < transitionValue) { 
+        setBgState(scrollValue / transitionValue)
+      } else {
+        setBgState(1)
+      }
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll)
