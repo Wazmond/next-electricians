@@ -1,9 +1,10 @@
+import HeaderBg from '@/components/HeaderBg'
 import React from 'react'
 
 const Page = () => {
   return (
     <div className="flex flex-col flex-1">
-      <span className="fixed w-full h-16 bg-[rgba(46,46,46)]" />
+      <HeaderBg />
       <span className="w-full h-16" />
       <div className="w-full max-w-[1178px] self-center p-8 flex flex-col gap-4 text-center">
         <h1>Terms and Conditions</h1>
