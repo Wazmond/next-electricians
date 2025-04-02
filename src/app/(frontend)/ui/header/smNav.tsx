@@ -9,11 +9,8 @@ interface Props {
 const NavButtons: React.FC<Props> = (props) => {
   return (
     <Link href={`/${props.redir}`} onClick={() => props.setMenuState(false)}>
-      <div className="hover:bg-mono-300">
-        <div className='mx-auto px-16 py-2 flex flex-row justify-between max-w-[400px]'>
-          <h2>{props.title}</h2>
-          <p>{'>'}</p>
-        </div>
+      <div className="active:bg-mono-300 mx-auto py-4 text-center max-w-[400px]">
+        <h2>{props.title}</h2>
       </div>
     </Link>
   )

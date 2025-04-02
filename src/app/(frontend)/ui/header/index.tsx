@@ -31,7 +31,7 @@ const Header = () => {
     const handleScroll = () => {
       const transitionValue = 100
       const scrollValue = window.scrollY
-      if (scrollValue < transitionValue) { 
+      if (scrollValue < transitionValue) {
         setBgState(scrollValue / transitionValue)
       } else {
         setBgState(1)
@@ -54,8 +54,8 @@ const Header = () => {
           ref={menuRef}
           className={`fixed z-[9] flex flex-col transform ${menuState ? 'scale-y-100' : 'scale-y-0'} origin-top overflow-hidden w-full bg-white transition-transform duration-150 ease-in-out`}
         >
-          <span className="h-16 border-b-2 border-mono-500" />
-          <div>
+          <span className="h-20 border-b-2 border-mono-500" />
+          <div className="font-robotoSerif text-lg tracking-widest">
             <NavButtons redir="" title="Home" setMenuState={setMenuState} />
             <NavButtons redir="about" title="About" setMenuState={setMenuState} />
             <NavButtons redir="services" title="Services" setMenuState={setMenuState} />
@@ -104,13 +104,13 @@ const Header = () => {
           onClick={() => setMenuState(!menuState)}
         >
           <span
-            className={`${menuState ? 'bg-black' : 'bg-white'} group-hover:bg-mono-500 h-0.5 w-8 transition-all ${menuState ? 'rotate-45 translate-y-2.5' : ''}`}
+            className={`${menuState ? 'bg-black' : 'bg-white'} h-0.5 w-8 transition-all ${menuState ? 'rotate-45 translate-y-2.5' : ''}`}
           />
           <span
-            className={`bg-white h-0.5 w-8 transition-all group-hover:bg-mono-500 ${menuState ? 'opacity-0' : 'opacity-100'}`}
+            className={`bg-white h-0.5 w-8 transition-all ${menuState ? 'opacity-0' : 'opacity-100'}`}
           />
           <span
-            className={`${menuState ? 'bg-black' : 'bg-white'} group-hover:bg-mono-500 h-0.5 w-8 transition-all ${menuState ? '-rotate-45 -translate-y-2.5' : ''}`}
+            className={`${menuState ? 'bg-black' : 'bg-white'} h-0.5 w-8 transition-all ${menuState ? '-rotate-45 -translate-y-2.5' : ''}`}
           />
         </button>
       </div>
