@@ -1,28 +1,34 @@
-import { CollectionConfig } from "payload";
+import { CollectionConfig } from 'payload'
 
 export const Services: CollectionConfig = {
-    access: {read: () => true},
-    slug: 'services',
-    defaultSort: ['-title'],
-    fields: [
+  access: { read: () => true },
+  slug: 'services',
+  defaultSort: ['-title'],
+  fields: [
+    {
+      name: 'services',
+      type: 'array',
+      fields: [
         {
-            name: 'title',
-            type: 'text',
-            required: true,
-            label: 'Title',
+          name: 'title',
+          type: 'text',
+          required: true,
+          label: 'Title',
         },
         {
-            name: 'description',
-            type: 'textarea',
-            required: true,
-            label: 'Description',
+          name: 'description',
+          type: 'textarea',
+          required: true,
+          label: 'Description',
         },
         {
-            name: 'image',
-            type: 'upload',
-            relationTo: 'media',
-            label: 'Photos',
-            required: true,
+          name: 'image',
+          type: 'upload',
+          relationTo: 'media',
+          label: 'Photos',
+          required: true,
         },
-    ]
+      ],
+    },
+  ],
 }
