@@ -1,25 +1,27 @@
 // import { payload } from '@/hooks/payload'
 // import { unstable_cache } from 'next/cache'
 import HeaderBg from '@/components/HeaderBg'
+import ServicesCard from '@/components/servicesCard'
+import { payload } from '@/hooks/payload'
+import { Service } from '@/payload-types'
+import { unstable_cache } from 'next/cache'
 import React from 'react'
 
-const Page = () => {
-  // const cached = unstable_cache(
-  //   async () => {
-  //     const res = await payload.find({
-  //       collection: "services"
-  //     })
-  //     return res
-  //   },
-  //   [],
-  //   {
-  //     revalidate: 60
-  //   }
-  // )
+const Page = async () => {
+  const cached = unstable_cache(
+    async () => {
+      const res = await payload.find({
+        collection: 'services',
+      })
+      return res
+    },
+    [],
+    {
+      revalidate: 60,
+    },
+  )
 
-  // const services = await cached()
-
-  // console.log(services)
+  const { docs } = await cached()
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
@@ -31,9 +33,11 @@ const Page = () => {
           impedit tempore expedita possimus non corrupti, nihil sequi fuga voluptatem repellat
           sapiente, aliquid corporis inventore iusto harum obcaecati quo?
         </p>
-        {/* <div className=''>
-          Make it a grid element and render the <ServicesCard /> component
-        </div> */}
+        <div className="">
+          {docs.map((service: Service, _) => (
+            <ServicesCard service={service} key={service.id} />
+          ))}
+        </div>
       </div>
     </div>
   )
