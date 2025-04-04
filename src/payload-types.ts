@@ -190,14 +190,9 @@ export interface Project {
  */
 export interface Service {
   id: number;
-  services?:
-    | {
-        title: string;
-        description: string;
-        image: number | Media;
-        id?: string | null;
-      }[]
-    | null;
+  title: string;
+  description: string;
+  image: number | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -339,14 +334,9 @@ export interface ProjectsSelect<T extends boolean = true> {
  * via the `definition` "services_select".
  */
 export interface ServicesSelect<T extends boolean = true> {
-  services?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        image?: T;
-        id?: T;
-      };
+  title?: T;
+  description?: T;
+  image?: T;
   updatedAt?: T;
   createdAt?: T;
 }

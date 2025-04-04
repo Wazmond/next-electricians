@@ -6,29 +6,23 @@ export const Services: CollectionConfig = {
   defaultSort: ['-title'],
   fields: [
     {
-      name: 'services',
-      type: 'array',
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-          required: true,
-          label: 'Title',
-        },
-        {
-          name: 'description',
-          type: 'textarea',
-          required: true,
-          label: 'Description',
-        },
-        {
-          name: 'image',
-          type: 'upload',
-          relationTo: 'media',
-          label: 'Photos',
-          required: true,
-        },
-      ],
+      name: 'title',
+      type: 'text',
+      required: true,
+      label: 'Title',
+    },
+    {
+      name: 'description',
+      type: 'textarea',
+      required: true,
+      label: 'Description',
+    },
+    {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Photos',
+      required: true,
     },
   ],
 }
