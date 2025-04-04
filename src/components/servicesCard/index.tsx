@@ -10,18 +10,15 @@ const ServicesCard = ({ service }: Props) => {
   const { title, image, description } = service
   return (
     <div
-      className={`aspect-[4/3] ${image ? 'flex' : 'hidden'} flex-col rounded-lg shadow-lg relative overflow-hidden`}
+      className={`${image ? 'flex' : 'hidden'} flex-row rounded-lg shadow-lg relative h-[120px] w-full p-4 justify-between bg-white border hover:cursor-pointer`}
     >
-      <div className="">
-        <Image
-          src={(image as Media).url!}
-          alt={(image as Media).alt!}
-          fill={true}
-          className="object-cover"
-        />
+      <div className="flex flex-col text-left font-robotoMono">
+        <h3 className="text-blue-900">{title}</h3>
+        <p>{description}</p>
       </div>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <div className="relative h-full aspect-square">
+        <Image src={(image as Media).url!} alt={(image as Media).alt!} fill={true} />
+      </div>
     </div>
   )
 }
