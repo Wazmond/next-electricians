@@ -13,7 +13,7 @@ const EnquireForm = (props: Props) => {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_KEY as string)
 
   return (
-    <div className="w-full py-4 bg-next-blue text-white flex flex-col gap-4 items-center font-robotoMono">
+    <div className="w-full py-4 px-8 bg-next-blue text-white flex flex-col gap-4 items-center font-robotoMono">
       <h2>{text}</h2>
       {state.succeeded ? (
         <p className="text-center">{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
@@ -21,7 +21,7 @@ const EnquireForm = (props: Props) => {
         <form
           onSubmit={handleSubmit}
           method="post"
-          className="flex flex-row max-[900px]:flex-wrap max-[900px]:gap-2 gap-6 items-center justify-center px-4"
+          className="flex flex-row max-[900px]:flex-wrap max-[900px]:gap-2 gap-6 items-center justify-center"
         >
           <InputField state name="name" type="text" placeholder="Name" />
           <InputField state name="phone" type="tel" placeholder="Phone Number" />
