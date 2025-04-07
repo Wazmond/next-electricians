@@ -35,8 +35,8 @@ const Page = async () => {
             sapiente, aliquid corporis inventore iusto harum obcaecati quo?
           </p>
         </div>
-        <div className="w-full p-8 bg-mono-200 items-center flex justify-center">
-          <div className="w-full max-w-[1178px] grid grid-cols-2 gap-16">
+        <div className="w-full p-8 bg-light-blue items-center flex justify-center">
+          <div className="w-full max-w-[1178px] grid grid-cols-2 gap-6">
             {docs.map((service: Service, _) => (
               <ServicesCard service={service} key={service.id} />
             ))}
