@@ -18,14 +18,18 @@ const EnquireForm = (props: Props) => {
       {state.succeeded ? (
         <p className="text-center">{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
       ) : (
-        <form onSubmit={handleSubmit} method="post" className="flex flex-row gap-6 items-center">
+        <form
+          onSubmit={handleSubmit}
+          method="post"
+          className="flex flex-row max-[900px]:flex-wrap max-[900px]:gap-2 gap-6 items-center justify-center px-4"
+        >
           <InputField state name="name" type="text" placeholder="Name" />
           <InputField state name="phone" type="tel" placeholder="Phone Number" />
           <InputField state name="email" type="email" placeholder="Email Address" />
           <button
             type="submit"
             disabled={state.submitting}
-            className="bg-white text-black py-2 px-4 rounded-lg w-full border-2 border-white hover:border-black hover:bg-mono-200"
+            className="max-[900px]:w-auto w-full bg-white text-black py-2 px-4 rounded-lg border-2 border-white hover:border-black hover:bg-mono-200"
           >
             {state.submitting ? 'Submitting...' : 'Enquire Now!'}
           </button>
