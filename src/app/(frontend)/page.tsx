@@ -5,6 +5,7 @@ import Testimonials from './(pages)/home/testimonials'
 import Contact from './(pages)/home/contact'
 import Projects from './(pages)/home/projects'
 import HomeServices from './(pages)/home/services'
+import EnquireForm from '@/components/enquiryForm'
 
 const Page = () => {
   return (
@@ -22,6 +23,7 @@ const Page = () => {
       <section className="gap-6 py-8 flex flex-col self-center w-full items-center max-w-[1178px] px-8">
         <Projects />
       </section>
+      <EnquireForm text="Talk to your NextElectricians now" buttonText="Enquire now!" />
       <section className="flex flex-col justify-center items-center py-8 bg-mono-200 w-full gap-4">
         <Testimonials />
       </section>
