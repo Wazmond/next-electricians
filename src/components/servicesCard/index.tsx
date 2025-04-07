@@ -10,14 +10,14 @@ const ServicesCard = ({ service }: Props) => {
   const { title, image, description } = service
   return (
     <div
-      className={`${image ? 'flex' : 'hidden'} flex-row rounded-lg shadow-lg relative h-[120px] w-full p-4 justify-between bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}
+      className={`${image ? 'flex' : 'hidden'} flex-row rounded-lg shadow-lg relative h-auto w-full p-4 gap-2 justify-between items-start bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}
     >
-      <div className="flex flex-col text-left font-robotoMono">
+      <div className="flex flex-col text-left font-robotoMono text-clip">
         <h3 className="text-blue-900">{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="relative h-full aspect-square">
-        <Image src={(image as Media).url!} alt={(image as Media).alt!} fill={true} />
+      <div className="relative h-[84px] aspect-square">
+        <Image src={(image as Media).url!} alt={(image as Media).alt!} fill />
       </div>
     </div>
   )

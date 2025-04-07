@@ -38,7 +38,7 @@ const Page = async () => {
           buttonText="Enquire Now"
         />
         <div className="w-full p-8 bg-light-blue items-center flex justify-center">
-          <div className="w-full max-w-[1178px] grid grid-cols-2 gap-6">
+          <div className="w-full max-w-[1178px] grid md:grid-cols-2 gap-6">
             {docs.map((service: Service, _) => (
               <ServicesCard service={service} key={service.id} />
             ))}
