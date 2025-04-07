@@ -35,21 +35,24 @@
 @layer base {
   h1 {
     @apply text-3xl;
+    @apply font-robotoSerif;
   }
   h2 {
     @apply text-2xl;
+    @apply font-robotoSerif;
   }
   h3 {
     @apply text-xl;
   }
   p {
     @apply text-sm;
-    font-family: 'Roboto';
+    @apply font-roboto;
     letter-spacing: 1px;
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
