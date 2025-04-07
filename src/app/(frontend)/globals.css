@@ -46,7 +46,7 @@
   }
   p {
     @apply text-sm;
-    font-family: 'Roboto';
+    @apply font-roboto;
     letter-spacing: 1px;
   }
 }
