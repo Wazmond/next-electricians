@@ -4,7 +4,7 @@ import React from 'react'
 import InputField from '../inputFields'
 
 interface Props {
-  text: string
+  text?: string
   buttonText: string
 }
 const EnquireForm = (props: Props) => {
@@ -14,7 +14,7 @@ const EnquireForm = (props: Props) => {
 
   return (
     <div className="w-full py-4 px-8 bg-next-blue text-white flex flex-col gap-4 items-center font-robotoMono">
-      <h2>{text}</h2>
+      {text && <h2 className="font-medium">{text}</h2>}
       {state.succeeded ? (
         <p className="text-center">{`Thank's for your enquiry, a NextElectrician will be in touch with you shortly.`}</p>
       ) : (
