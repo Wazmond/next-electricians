@@ -25,8 +25,7 @@ const Page = async () => {
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
-      <span className="w-full h-16" />
-      <div className="w-full self-center flex flex-col gap-4 text-center">
+      <div className="mt-16 w-full self-center flex flex-col gap-4 text-center">
         <div className="max-w-[1178px] self-center p-8 flex flex-col gap-4 text-center">
           <h1>Our Services</h1>
           <p>
