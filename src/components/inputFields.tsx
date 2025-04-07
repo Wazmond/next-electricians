@@ -3,7 +3,7 @@ import React from 'react'
 
 interface Props {
   state: any
-  title: string
+  title?: string
   type: string
   name: string
   placeholder: string
@@ -11,8 +11,8 @@ interface Props {
 
 const InputField = (props: Props) => {
   return (
-    <div className="flex flex-col w-full gap-1">
-      <label className="uppercase text-sm">{props.title}</label>
+    <div className="flex flex-col w-full gap-1 text-black">
+      {props.title && <label className="uppercase text-sm">{props.title}</label>}
       {props.name == 'desc' ? (
         <textarea
           name={`${props.name}`}
