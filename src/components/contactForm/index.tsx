@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import InputField from './inputFields'
+import InputField from '../inputFields'
 import { useForm } from '@formspree/react'
 
 const ContactForm = () => {
