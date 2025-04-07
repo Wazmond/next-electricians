@@ -35,6 +35,7 @@
 @layer base {
   h1 {
     @apply text-3xl;
+    @apply font-robotoSerif;
   }
   h2 {
     @apply text-2xl;
@@ -49,7 +50,8 @@
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
