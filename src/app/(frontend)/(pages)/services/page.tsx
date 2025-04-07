@@ -1,6 +1,4 @@
-// import { payload } from '@/hooks/payload'
-// import { unstable_cache } from 'next/cache'
-import EnquireForm from '@/components/enqurieForm'
+import EnquireForm from '@/components/enquiryForm'
 import HeaderBg from '@/components/HeaderBg'
 import ServicesCard from '@/components/servicesCard'
 import { payload } from '@/hooks/payload'
