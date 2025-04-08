@@ -13,6 +13,7 @@ import { Media } from './collections/Media'
 import { Projects } from './collections/Projects'
 import { Services } from './collections/Services'
 import { Featured } from './collections/Featured'
+import { Pages } from './globals/Pages'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -25,6 +26,7 @@ export default buildConfig({
     },
   },
   collections: [Featured, Users, Media, Projects, Services],
+  globals: [Pages],
   editor: lexicalEditor(),
   email: nodemailerAdapter(),
   secret: process.env.NEXT_PAYLOAD_SECRET || '',
@@ -40,10 +42,10 @@ export default buildConfig({
   plugins: [
     vercelBlobStorage({
       collections: {
-        media: true
+        media: true,
       },
       token: process.env.BLOB_READ_WRITE_TOKEN,
-      enabled: true
+      enabled: true,
     }),
   ],
 })

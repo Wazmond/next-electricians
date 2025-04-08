@@ -90,8 +90,12 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    pages: Page;
+  };
+  globalsSelect: {
+    pages: PagesSelect<false> | PagesSelect<true>;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -371,6 +375,66 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  home_bgImage: number | Media;
+  home_title: string;
+  home_subTitle: string;
+  home_aboutTitle: string;
+  home_aboutImage: number | Media;
+  home_aboutText: string;
+  home_servicesTitle: string;
+  home_servicesText: string;
+  home_projectsTitle: string;
+  home_projectsText: string;
+  home_enquiryTitle: string;
+  home_testimonialsTitle: string;
+  about_title: string;
+  about_text: string;
+  services_title: string;
+  services_text: string;
+  services_enquiryTitle: string;
+  projects_title: string;
+  projects_text: string;
+  contacts_title: string;
+  contacts_text?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  home_bgImage?: T;
+  home_title?: T;
+  home_subTitle?: T;
+  home_aboutTitle?: T;
+  home_aboutImage?: T;
+  home_aboutText?: T;
+  home_servicesTitle?: T;
+  home_servicesText?: T;
+  home_projectsTitle?: T;
+  home_projectsText?: T;
+  home_enquiryTitle?: T;
+  home_testimonialsTitle?: T;
+  about_title?: T;
+  about_text?: T;
+  services_title?: T;
+  services_text?: T;
+  services_enquiryTitle?: T;
+  projects_title?: T;
+  projects_text?: T;
+  contacts_title?: T;
+  contacts_text?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
