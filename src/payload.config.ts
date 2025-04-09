@@ -13,7 +13,10 @@ import { Media } from './collections/Media'
 import { Projects } from './collections/Projects'
 import { Services } from './collections/Services'
 import { Featured } from './collections/Featured'
-import { Pages } from './globals/Pages'
+import { AboutPage } from './globals/About'
+import { ServicesPage } from './globals/Services'
+import { ProjectsPage } from './globals/Projects'
+import { HomePage } from './globals/Home'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -26,7 +29,7 @@ export default buildConfig({
     },
   },
   collections: [Featured, Users, Media, Projects, Services],
-  globals: [Pages],
+  globals: [HomePage, AboutPage, ServicesPage, ProjectsPage],
   editor: lexicalEditor(),
   email: nodemailerAdapter(),
   secret: process.env.NEXT_PAYLOAD_SECRET || '',
