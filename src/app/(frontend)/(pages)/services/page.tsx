@@ -1,8 +1,8 @@
 import EnquiryForm from '@/components/enquiryForm'
 import HeaderBg from '@/components/HeaderBg'
 import ServicesCard from '@/components/servicesCard'
-import { getGlobal, payload } from '@/hooks/payload'
-import { Service, ServicesPage } from '@/payload-types'
+import { payload } from '@/hooks/payload'
+import { Service } from '@/payload-types'
 import { unstable_cache } from 'next/cache'
 import React from 'react'
 
