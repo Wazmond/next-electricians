@@ -17,8 +17,8 @@ export const HomePage: GlobalConfig = {
     {
       name: 'title',
       type: 'text',
-      label: 'Home Title',
-      required: true,
+      label: 'Home Title (Leave as empty if you want "We are your /bNextElectricians/b !")',
+      required: false,
     },
     {
       name: 'subTitle',
