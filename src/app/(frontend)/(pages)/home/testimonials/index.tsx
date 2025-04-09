@@ -2,12 +2,17 @@ import CTAButton from '@/components/ctaButton'
 import ReviewCard from './reviewCard'
 import Stars from '@/components/stars'
 import React from 'react'
+import { HomePage } from '@/payload-types'
 
-const Testimonials = () => {
+interface Props {
+  pageContent: HomePage
+}
+
+const Testimonials = ({ pageContent }: Props) => {
   return (
     <>
-      <div className='text-black font-robotoSerif'>
-        <h2>{`Trusted by many, here's why`}</h2>
+      <div className="text-black font-robotoSerif">
+        <h2>{pageContent.testimonialsTitle}</h2>
         <div className={`flex flex-row justify-center items-center gap-2`}>
           <Stars size={12} color={'#ffd250'} gap={'[2px]'} />
           <p className={`text-sm font-robotoSerif`}>5.0 rating of 9 reviews</p>
@@ -33,11 +38,11 @@ const Testimonials = () => {
         />
       </div>
 
-      <CTAButton 
-      href="https://g.co/kgs/DXmE18Y" 
-      target="_blank" 
-      className='bg-white hover:bg-mono-300 text-black border border-mono-500'
-      text="View More"
+      <CTAButton
+        href="https://g.co/kgs/DXmE18Y"
+        target="_blank"
+        className="bg-white hover:bg-mono-300 text-black border border-mono-500"
+        text="View More"
       />
     </>
   )

@@ -7,7 +7,7 @@ interface Props {
   text?: string
   buttonText: string
 }
-const EnquireForm = (props: Props) => {
+const EnquiryForm = (props: Props) => {
   const { text, buttonText } = props
 
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_KEY as string)
@@ -39,4 +39,4 @@ const EnquireForm = (props: Props) => {
   )
 }
 
-export default EnquireForm
+export default EnquiryForm

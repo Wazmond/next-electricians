@@ -91,10 +91,16 @@ export interface Config {
     defaultIDType: number;
   };
   globals: {
-    pages: Page;
+    homePage: HomePage;
+    aboutPage: AboutPage;
+    servicesPage: ServicesPage;
+    projectsPage: ProjectsPage;
   };
   globalsSelect: {
-    pages: PagesSelect<false> | PagesSelect<true>;
+    homePage: HomePageSelect<false> | HomePageSelect<true>;
+    aboutPage: AboutPageSelect<false> | AboutPageSelect<true>;
+    servicesPage: ServicesPageSelect<false> | ServicesPageSelect<true>;
+    projectsPage: ProjectsPageSelect<false> | ProjectsPageSelect<true>;
   };
   locale: null;
   user: User & {
@@ -378,60 +384,110 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
+ * via the `definition` "homePage".
  */
-export interface Page {
+export interface HomePage {
   id: number;
-  home_bgImage: number | Media;
-  home_title: string;
-  home_subTitle: string;
-  home_aboutTitle: string;
-  home_aboutImage: number | Media;
-  home_aboutText: string;
-  home_servicesTitle: string;
-  home_servicesText: string;
-  home_projectsTitle: string;
-  home_projectsText: string;
-  home_enquiryTitle: string;
-  home_testimonialsTitle: string;
-  about_title: string;
-  about_text: string;
-  services_title: string;
-  services_text: string;
-  services_enquiryTitle: string;
-  projects_title: string;
-  projects_text: string;
-  contacts_title: string;
-  contacts_text?: string | null;
+  bgImage: number | Media;
+  title?: string | null;
+  subTitle: string;
+  aboutTitle: string;
+  aboutImage: number | Media;
+  aboutText: string;
+  servicesTitle: string;
+  servicesText: string;
+  projectsTitle: string;
+  projectsText: string;
+  enquiryTitle: string;
+  testimonialsTitle: string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages_select".
+ * via the `definition` "aboutPage".
  */
-export interface PagesSelect<T extends boolean = true> {
-  home_bgImage?: T;
-  home_title?: T;
-  home_subTitle?: T;
-  home_aboutTitle?: T;
-  home_aboutImage?: T;
-  home_aboutText?: T;
-  home_servicesTitle?: T;
-  home_servicesText?: T;
-  home_projectsTitle?: T;
-  home_projectsText?: T;
-  home_enquiryTitle?: T;
-  home_testimonialsTitle?: T;
-  about_title?: T;
-  about_text?: T;
-  services_title?: T;
-  services_text?: T;
-  services_enquiryTitle?: T;
-  projects_title?: T;
-  projects_text?: T;
-  contacts_title?: T;
-  contacts_text?: T;
+export interface AboutPage {
+  id: number;
+  title: string;
+  text: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "servicesPage".
+ */
+export interface ServicesPage {
+  id: number;
+  title: string;
+  text: string;
+  enquiryTitle: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projectsPage".
+ */
+export interface ProjectsPage {
+  id: number;
+  title: string;
+  text: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homePage_select".
+ */
+export interface HomePageSelect<T extends boolean = true> {
+  bgImage?: T;
+  title?: T;
+  subTitle?: T;
+  aboutTitle?: T;
+  aboutImage?: T;
+  aboutText?: T;
+  servicesTitle?: T;
+  servicesText?: T;
+  projectsTitle?: T;
+  projectsText?: T;
+  enquiryTitle?: T;
+  testimonialsTitle?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "aboutPage_select".
+ */
+export interface AboutPageSelect<T extends boolean = true> {
+  title?: T;
+  text?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "servicesPage_select".
+ */
+export interface ServicesPageSelect<T extends boolean = true> {
+  title?: T;
+  text?: T;
+  enquiryTitle?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projectsPage_select".
+ */
+export interface ProjectsPageSelect<T extends boolean = true> {
+  title?: T;
+  text?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
