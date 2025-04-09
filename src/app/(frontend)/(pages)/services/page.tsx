@@ -1,4 +1,4 @@
-import EnquireForm from '@/components/enquiryForm'
+import EnquiryForm from '@/components/enquiryForm'
 import HeaderBg from '@/components/HeaderBg'
 import ServicesCard from '@/components/servicesCard'
 import { payload } from '@/hooks/payload'
@@ -33,7 +33,7 @@ const Page = async () => {
             sapiente, aliquid corporis inventore iusto harum obcaecati quo?
           </p>
         </div>
-        <EnquireForm
+        <EnquiryForm
           text="Got something special? Lets discuss to see if we can make it happen!"
           buttonText="Enquire Now"
         />
