@@ -389,7 +389,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 export interface HomePage {
   id: number;
   bgImage: number | Media;
-  title: string;
+  title?: string | null;
   subTitle: string;
   aboutTitle: string;
   aboutImage: number | Media;
