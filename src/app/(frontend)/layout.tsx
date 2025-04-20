@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'NextElectricians',
     template: '%s | NextElectricians',
   },
-  description: 'NextElectricians website'    
+  description: 'NextElectricians website',
 }
 
 export const viewport: Viewport = {
@@ -22,9 +22,10 @@ export const viewport: Viewport = {
 
 type LayoutProps = {
   children: ReactNode
+  projectModal: ReactNode
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, projectModal }: LayoutProps) => {
   return (
     <html lang="en">
       <body className="flex flex-col overflow-y-scroll bg-mono-50 ">
@@ -33,6 +34,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Header />
         <main className="flex flex-1 flex-col">
           {children}
+          {projectModal}
           <Footer />
         </main>
       </body>
