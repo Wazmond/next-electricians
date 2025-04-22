@@ -2,13 +2,9 @@ import HeaderBg from '@/components/HeaderBg'
 import ProjectDetails from '@/components/projectDetails'
 import React from 'react'
 
-interface Props {
-  params: {
-    id: string
-  }
-}
+type Props = Promise<{ id: string }>
 
-const page = async ({ params }: Props) => {
+const page = async ({ params }: { params: Props }) => {
   const { id } = await params
   return (
     <>
