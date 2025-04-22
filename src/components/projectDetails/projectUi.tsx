@@ -24,23 +24,27 @@ const ProjectUi = ({ data, isModal }: Props) => {
 
   // Will need to create a placeholder box of images until the images load ( images ? image : placeholder )
   return (
-    <div className="flex flex-col bg-white gap-4 p-4 w-full max-w-[1000px]">
+    <div className="flex flex-col bg-white gap-4 p-4 w-full max-w-[1000px] relative">
+      {isModal && (
+        <button
+          className="self-end fixed bg-mono-600 rounded-full p-1"
+          onClick={() => router.back()}
+        >
+          <IoClose size={32} color="white" />
+        </button>
+      )}
       {/* Will need to configure sizing of the main and details bit */}
-      <div className="flex flex-col h-auto md:flex-row items-center md:items-start gap-4">
-        <div className="flex flex-col items-end order-1 md:order-2">
-          {isModal && (
-            <button className="bg-mono-600 rounded-full p-1" onClick={() => router.back()}>
-              <IoClose size={32} color="white" />
-            </button>
-          )}
-          <div className="text-start flex flex-col text-black gap-2">
+      <div className="flex flex-col h-auto md:flex-row items-center md:justify-between md:items-start gap-4">
+        <div className="flex flex-col w-full items-start order-2">
+          <div className="text-start flex flex-col text-black gap-2 mr-[40px]">
             <h3 className="font-roboto">{data.title}</h3>
             <p className="text-mono-700 font-roboto text-xs">{formattedDate}</p>
             <p>{data.description}</p>
           </div>
         </div>
+
         <div
-          className={`max-w-[500px] w-full md:min-w-[500px] max-h-[500px] h-auto flex relative order-2 md:order-1 `}
+          className={`max-w-[500px] w-full md:min-w-[500px] max-h-[500px] h-auto flex relative order-3 md:order-1 `}
         >
           {(data.images[mainImage].image as Media).url ? (
             <Image
