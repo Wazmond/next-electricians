@@ -201,7 +201,13 @@ export interface Project {
 export interface Service {
   id: number;
   title: string;
-  description: string;
+  description?: string | null;
+  services?:
+    | {
+        service?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   image: number | Media;
   updatedAt: string;
   createdAt: string;
@@ -346,6 +352,12 @@ export interface ProjectsSelect<T extends boolean = true> {
 export interface ServicesSelect<T extends boolean = true> {
   title?: T;
   description?: T;
+  services?:
+    | T
+    | {
+        service?: T;
+        id?: T;
+      };
   image?: T;
   updatedAt?: T;
   createdAt?: T;
