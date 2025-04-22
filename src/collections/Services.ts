@@ -14,8 +14,20 @@ export const Services: CollectionConfig = {
     {
       name: 'description',
       type: 'textarea',
-      required: true,
+      required: false,
       label: 'Description',
+    },
+    {
+      name: 'services',
+      type: 'array',
+      label: 'Services',
+      fields: [
+        {
+          name: 'service',
+          type: 'text',
+          label: 'Service',
+        },
+      ],
     },
     {
       name: 'image',
