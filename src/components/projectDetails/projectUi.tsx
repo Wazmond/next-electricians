@@ -56,7 +56,7 @@ const ProjectUi = ({ data, isModal }: Props) => {
         </div>
       </div>
 
-      <div className="h-auto w-full flex flex-row gap-4 items-start overflow-x-scroll">
+      <div className="h-auto w-full flex flex-row gap-4 items-start overflow-x-auto">
         {data.images ? (
           data.images.map((image, index) => {
             return (

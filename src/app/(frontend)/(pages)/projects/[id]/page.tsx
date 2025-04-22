@@ -9,7 +9,7 @@ const page = async ({ params }: { params: Props }) => {
   return (
     <>
       <HeaderBg />
-      <div className="mt-20 relative">
+      <div className="mt-20 h-full relative flex justify-center">
         <ProjectDetails id={Number(id)} isModal={false} />
       </div>
     </>
