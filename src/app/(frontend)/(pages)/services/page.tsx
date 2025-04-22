@@ -3,7 +3,6 @@ import HeaderBg from '@/components/HeaderBg'
 import ServicesCard from '@/components/servicesCard'
 import { payload } from '@/hooks/payload'
 import { Service } from '@/payload-types'
-import { unstable_cache } from 'next/cache'
 import React from 'react'
 
 const Page = async () => {
@@ -11,20 +10,10 @@ const Page = async () => {
     slug: 'servicesPage',
   })
 
-  const cached = unstable_cache(
-    async () => {
-      const res = await payload.find({
-        collection: 'services',
-      })
-      return res
-    },
-    [],
-    {
-      revalidate: 60,
-    },
-  )
+  const { docs } = await payload.find({
+    collection: 'services',
+  })
 
-  const { docs } = await cached()
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
