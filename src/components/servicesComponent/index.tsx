@@ -28,7 +28,7 @@ const ServicesComponent = async ({ searchParams }: Props) => {
         <MiddleColumn param={param} docs={docs} />
       </div>
 
-      <div
+      {/* <div
         style={{
           borderTopLeftRadius: `${param == 1 ? '0' : '12px'}`,
           borderBottomLeftRadius: `${param == docs.length ? '0' : '12px'}`,
@@ -49,9 +49,7 @@ const ServicesComponent = async ({ searchParams }: Props) => {
           <h3>{docs[param - 1].title}</h3>
           <p>{docs[param - 1].description}</p>
         </Suspense>
-        {/* {docs && docs.map((service) => <ServicesCard key={service.id} service={service} />)} */}
-        {/* <div>{(await searchParams).service && <h1>{(await searchParams).service}</h1>}</div> */}
-      </div>
+      </div> */}
     </div>
   )
 }
