@@ -3,6 +3,7 @@ import React, { Suspense } from 'react'
 import ServicesCard from './servicesCard'
 import { Media, Service } from '@/payload-types'
 import Image from 'next/image'
+import MiddleColumn from './midCol'
 
 type Props = {
   searchParams: Promise<{ service?: number }>
@@ -13,34 +14,27 @@ const ServicesComponent = async ({ searchParams }: Props) => {
     collection: 'services',
   })
 
-  // console.log(await searchParams)
   const param: number = (await searchParams).service ?? 1
 
-  console.log('Param: ' + param)
-  console.log('Docs Length: ' + docs.length)
-  console.log('Docs: ' + JSON.stringify(docs))
-
   return (
-    <div className="max-w-[1178px] self-center flex flex-row">
+    <div className="max-w-[1178px] w-full self-center flex flex-row">
       {/* Services column with all services */}
-      <div className="flex flex-1 flex-col gap-2 h-auto">
-        {docs.map((service, index) => (
-          <ServicesCard service={service} index={index + 1} id={param} key={service.id} />
-        ))}
+      <div className="relative flex flex-1 flex-row h-min">
+        <div className=" flex flex-col w-full gap-2">
+          {docs.map((service, index) => (
+            <ServicesCard service={service} index={index + 1} param={param} key={service.id} />
+          ))}
+        </div>
+        <MiddleColumn param={param} docs={docs} />
       </div>
-      {/* Services details half with details of services */}
-      <div className="flex flex-col w-8 bg-white">
-        <span
-          style={{ flex: `${param === 1 ? '0' : `${param - 1}`}  1 0%` }}
-          className={`bg-light-blue rounded-br-2xl transition-all duration-150 ease-out`}
-        />
-        <span className={`h-[120px]`} />
-        <span
-          style={{ flex: `${param === docs.length ? '0' : `${docs.length - param}`} 1 0%` }}
-          className={`bg-light-blue rounded-tr-2xl transition-all duration-150 ease-out`}
-        />
-      </div>
-      <div className="flex flex-1 flex-col items-center bg-white rounded-tr-lg rounded-br-lg rounded-bl-lg p-4 gap-4 z-[2]">
+
+      <div
+        style={{
+          borderTopLeftRadius: `${param == 1 ? '0' : '12px'}`,
+          borderBottomLeftRadius: `${param == docs.length ? '0' : '12px'}`,
+        }}
+        className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
+      >
         <Suspense fallback={<></>}>
           <div className="relative w-full h-[400px] aspect-auto flex items-center justify-center">
             <Image
