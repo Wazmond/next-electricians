@@ -14,10 +14,6 @@ const Page = async ({ searchParams }: Props) => {
     slug: 'servicesPage',
   })
 
-  // const { docs } = await payload.find({
-  //   collection: 'services',
-  // })
-
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
@@ -28,9 +24,11 @@ const Page = async ({ searchParams }: Props) => {
         </div>
         <EnquiryForm text={pageContent.enquiryTitle} buttonText="Enquire Now" />
 
-        <section className="bg-light-blue w-full items-center flex justify-center py-8">
-          <ServicesComponent searchParams={searchParams} />
-        </section>
+        <Suspense fallback={<></>}>
+          <section className="bg-light-blue w-full items-center flex justify-center py-8">
+            <ServicesComponent searchParams={searchParams} />
+          </section>
+        </Suspense>
       </div>
     </div>
   )
