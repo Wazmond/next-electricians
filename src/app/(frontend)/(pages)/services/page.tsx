@@ -1,30 +1,23 @@
 import EnquiryForm from '@/components/enquiryForm'
 import HeaderBg from '@/components/HeaderBg'
-import ServicesCard from '@/components/servicesCard'
+import ServicesComponent from '@/components/servicesComponent'
+// import ServicesCard from '@/components/servicesCard'
 import { payload } from '@/hooks/payload'
 import { Service } from '@/payload-types'
-import { unstable_cache } from 'next/cache'
-import React from 'react'
+import React, { Suspense } from 'react'
 
-const Page = async () => {
+type Props = {
+  searchParams: Promise<{ service?: number }>
+}
+const Page = async ({ searchParams }: Props) => {
   const pageContent = await payload.findGlobal({
     slug: 'servicesPage',
   })
 
-  const cached = unstable_cache(
-    async () => {
-      const res = await payload.find({
-        collection: 'services',
-      })
-      return res
-    },
-    [],
-    {
-      revalidate: 60,
-    },
-  )
+  // const { docs } = await payload.find({
+  //   collection: 'services',
+  // })
 
-  const { docs } = await cached()
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
@@ -34,13 +27,10 @@ const Page = async () => {
           <p>{pageContent.text}</p>
         </div>
         <EnquiryForm text={pageContent.enquiryTitle} buttonText="Enquire Now" />
-        <div className="w-full p-8 bg-light-blue items-center flex justify-center">
-          <div className="w-full max-w-[1178px] grid md:grid-cols-2 gap-6">
-            {docs.map((service: Service, _) => (
-              <ServicesCard service={service} key={service.id} />
-            ))}
-          </div>
-        </div>
+
+        <section className="bg-light-blue w-full items-center flex justify-center py-8">
+          <ServicesComponent searchParams={searchParams} />
+        </section>
       </div>
     </div>
   )

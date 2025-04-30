@@ -7,7 +7,7 @@ interface Props {
 }
 
 const ServicesCard = ({ service }: Props) => {
-  const { title, image, description } = service
+  const { title, image, description, services } = service
   return (
     <div
       className={`${image ? 'flex' : 'hidden'} flex-row rounded-lg shadow-lg relative h-auto w-full p-4 gap-2 justify-between items-start bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}
@@ -17,10 +17,16 @@ const ServicesCard = ({ service }: Props) => {
         <p>{description}</p>
       </div>
       <div className="relative h-[84px] aspect-square">
-        <Image src={(image as Media).url!} alt={(image as Media).alt!} fill />
+        <Image
+          src={(image as Media).url!}
+          alt={(image as Media).alt!}
+          height={(image as Media).height!}
+          width={(image as Media).width!}
+          className="object-cover"
+        />
       </div>
     </div>
   )
 }
 
-export default ServicesCard
+// export default ServicesCard
