@@ -10,7 +10,7 @@ import Image from 'next/image'
 import React, { Suspense } from 'react'
 
 type Props = {
-  searchParams: Promise<{ service?: number }>
+  searchParams: { service?: number }
 }
 const Page = async ({ searchParams }: Props) => {
   const pageContent = await payload.findGlobal({
@@ -21,7 +21,7 @@ const Page = async ({ searchParams }: Props) => {
     collection: 'services',
   })
 
-  const param: number = (await searchParams).service ?? 1
+  const param: number = searchParams.service ?? 1
 
   return (
     <div className="flex flex-col flex-1">

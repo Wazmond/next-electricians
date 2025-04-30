@@ -1,5 +1,4 @@
-import { Media, Service } from '@/payload-types'
-import Image from 'next/image'
+import { Service } from '@/payload-types'
 import Link from 'next/link'
 import React from 'react'
 
