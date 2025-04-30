@@ -28,15 +28,9 @@ const Page = async ({ searchParams }: Props) => {
         </div>
         <EnquiryForm text={pageContent.enquiryTitle} buttonText="Enquire Now" />
 
-        <ServicesComponent searchParams={searchParams} />
-
-        <div className="w-full p-8 bg-light-blue items-center flex justify-center">
-          {/* <div className="w-full max-w-[1178px] grid md:grid-cols-2 gap-6">
-            {docs.map((service: Service, _) => (
-              <ServicesCard service={service} key={service.id} />
-            ))}
-          </div> */}
-        </div>
+        <section className="bg-light-blue w-full items-center flex justify-center py-8">
+          <ServicesComponent searchParams={searchParams} />
+        </section>
       </div>
     </div>
   )

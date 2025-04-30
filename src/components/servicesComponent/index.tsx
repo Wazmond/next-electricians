@@ -14,51 +14,50 @@ const ServicesComponent = async ({ searchParams }: Props) => {
   })
 
   // console.log(await searchParams)
-  const param: number = (await searchParams).service ?? 0
+  const param: number = (await searchParams).service ?? 1
 
   console.log('Param: ' + param)
   console.log('Docs Length: ' + docs.length)
+  console.log('Docs: ' + JSON.stringify(docs))
 
   return (
-    <div className="p-8 flex flex-row bg-light-blue w-full">
+    <div className="max-w-[1178px] self-center flex flex-row">
       {/* Services column with all services */}
-      <div className="flex flex-col gap-2 h-auto flex-1">
+      <div className="flex flex-1 flex-col gap-2 h-auto">
         {docs.map((service, index) => (
           <ServicesCard service={service} index={index + 1} id={param} key={service.id} />
         ))}
       </div>
       {/* Services details half with details of services */}
-      <div className="flex flex-col h-full w-8 bg-white">
+      <div className="flex flex-col w-8 bg-white">
         <span
-          style={{ height: `calc(${param == 1 ? 0 : param - 1}/${docs.length})` }}
-          className={`bg-light-blue`}
+          style={{ flex: `${param === 1 ? '0' : `${param - 1}`}  1 0%` }}
+          className={`bg-light-blue rounded-br-2xl transition-all duration-150 ease-out`}
         />
-        <span style={{ height: `calc(1/${docs.length})` }} className={``} />
+        <span className={`h-[120px]`} />
         <span
-          style={{
-            height: `calc(${param == docs.length ? 0 : docs.length - param}/${docs.length})`,
-          }}
-          className={`bg-light-blue`}
+          style={{ flex: `${param === docs.length ? '0' : `${docs.length - param}`} 1 0%` }}
+          className={`bg-light-blue rounded-tr-2xl transition-all duration-150 ease-out`}
         />
       </div>
-      <div className="flex flex-col items-center bg-white rounded-tr-lg rounded-br-lg rounded-bl-lg flex-1 p-4 gap-4 z-[2]">
+      <div className="flex flex-1 flex-col items-center bg-white rounded-tr-lg rounded-br-lg rounded-bl-lg p-4 gap-4 z-[2]">
         <Suspense fallback={<></>}>
-          <div className="relative w-full aspect-auto">
+          <div className="relative w-full h-[400px] aspect-auto flex items-center justify-center">
             <Image
-              src={(docs[param].image as Media).url!}
-              alt={(docs[param].image as Media).alt}
-              height={(docs[param].image as Media).height as number}
-              width={(docs[param].image as Media).width as number}
-              className="object-contain"
+              src={(docs[param - 1].image as Media).url!}
+              alt={(docs[param - 1].image as Media).alt}
+              height={(docs[param - 1].image as Media).height as number}
+              width={(docs[param - 1].image as Media).width as number}
+              className="object-contain max-w-full max-h-full"
             />
           </div>
 
-          <h3>{docs[param].title}</h3>
-          <p>{docs[param].description}</p>
+          <h3>{docs[param - 1].title}</h3>
+          <p>{docs[param - 1].description}</p>
         </Suspense>
+        {/* {docs && docs.map((service) => <ServicesCard key={service.id} service={service} />)} */}
+        {/* <div>{(await searchParams).service && <h1>{(await searchParams).service}</h1>}</div> */}
       </div>
-      {/* {docs && docs.map((service) => <ServicesCard key={service.id} service={service} />)} */}
-      {/* <div>{(await searchParams).service && <h1>{(await searchParams).service}</h1>}</div> */}
     </div>
   )
 }

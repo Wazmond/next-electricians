@@ -14,7 +14,7 @@ const ServicesCard = ({ service, id, index }: Props) => {
     // Change width of card Padding or Margin to fill gap between card and details component
     <Link href={`/services?service=${index}`} scroll={false}>
       <div
-        className={`${service.image ? 'flex' : 'hidden'} flex-row rounded-lg shadow-lg relative h-auto w-full p-4 gap-2 justify-between items-start bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}
+        className={`${service.image ? 'flex' : 'hidden'} flex-row rounded-lg relative h-auto w-full p-4 gap-2 justify-between items-start bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}
       >
         <div className="flex flex-col text-left font-robotoMono text-clip">
           <h3 className="text-blue-900">{service.title}</h3>
