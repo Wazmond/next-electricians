@@ -10,7 +10,7 @@ import Image from 'next/image'
 import React, { Suspense } from 'react'
 
 type Props = {
-  searchParams: { service?: number }
+  searchParams: Promise<{ service?: number }>
 }
 const Page = async ({ searchParams }: Props) => {
   const pageContent = await payload.findGlobal({
@@ -21,7 +21,7 @@ const Page = async ({ searchParams }: Props) => {
     collection: 'services',
   })
 
-  const param: number = searchParams.service ?? 1
+  const param: number = (await searchParams).service ?? 1
 
   return (
     <div className="flex flex-col flex-1">
@@ -34,10 +34,10 @@ const Page = async ({ searchParams }: Props) => {
         <EnquiryForm text={pageContent.enquiryTitle} buttonText="Enquire Now" />
 
         <section className="bg-light-blue w-full items-center flex justify-center py-8">
-          <div className="max-w-[1178px] w-full self-center flex flex-row">
-            {/* Services column with all services */}
-            <div className="relative flex flex-1 flex-row h-min">
-              <Suspense fallback={<></>}>
+          <Suspense fallback={<p>Loading...</p>}>
+            <div className="max-w-[1178px] w-full self-center flex flex-row">
+              {/* Services column with all services */}
+              <div className="relative flex flex-1 flex-row h-min">
                 <div className=" flex flex-col w-full gap-2">
                   {docs.map((service, index) => (
                     <ServicesCard
@@ -47,19 +47,16 @@ const Page = async ({ searchParams }: Props) => {
                       key={service.id}
                     />
                   ))}
+                  <MiddleColumn param={param} docs={docs} />
                 </div>
-              </Suspense>
-              <MiddleColumn param={param} docs={docs} />
-            </div>
-
-            <div
-              style={{
-                borderTopLeftRadius: `${param == 1 ? '0' : '12px'}`,
-                borderBottomLeftRadius: `${param == docs.length ? '0' : '12px'}`,
-              }}
-              className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
-            >
-              <Suspense fallback={<></>}>
+              </div>
+              <div
+                style={{
+                  borderTopLeftRadius: `${param == 1 ? '0' : '12px'}`,
+                  borderBottomLeftRadius: `${param == docs.length ? '0' : '12px'}`,
+                }}
+                className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
+              >
                 <div className="relative w-full h-[400px] aspect-auto flex items-center justify-center">
                   <Image
                     src={(docs[param - 1].image as Media).url!}
@@ -72,9 +69,9 @@ const Page = async ({ searchParams }: Props) => {
 
                 <h3>{docs[param - 1].title}</h3>
                 <p>{docs[param - 1].description}</p>
-              </Suspense>
+              </div>
             </div>
-          </div>
+          </Suspense>
         </section>
       </div>
     </div>
