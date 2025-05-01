@@ -47,8 +47,8 @@ const Page = async ({ searchParams }: Props) => {
                       key={service.id}
                     />
                   ))}
-                  <MiddleColumn param={param} docs={docs} />
                 </div>
+                <MiddleColumn param={param} docs={docs} />
               </div>
               <div
                 style={{
