@@ -33,13 +33,13 @@ const ServicesSection = async ({ paramId }: Props) => {
         className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
       >
         <div className="relative w-full h-[400px] aspect-auto flex items-center justify-center">
-          <Image
+          {/* <Image
             src={(docs[paramId - 1].image as Media).url!}
             alt={(docs[paramId - 1].image as Media).alt}
             height={(docs[paramId - 1].image as Media).height as number}
             width={(docs[paramId - 1].image as Media).width as number}
             className="object-contain max-w-full max-h-full"
-          />
+          /> */}
         </div>
 
         <h3>{docs[paramId - 1].title}</h3>

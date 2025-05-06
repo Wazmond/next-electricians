@@ -10,7 +10,7 @@ interface Props {
 
 const ServicesCard = ({ service, param, index }: Props) => {
   return (
-    <Link href={`/services?service=${index}`} scroll={false} shallow>
+    <Link href={`/services?service=${index}`} replace={true} scroll={false} shallow>
       <div
         style={{ borderRadius: `12px ${param == index ? '0 0' : '12px 12px'} 12px` }}
         className={`${service.image ? 'flex' : 'hidden'} flex-row relative h-16 w-full p-4 gap-2 justify-between items-start bg-white border-2 border-white hover:cursor-pointer hover:border-next-blue`}

@@ -14,9 +14,11 @@ import ServicesSection from './servicesSection'
 type Props = {
   searchParams: Promise<{ service?: number }>
 }
+
 const Page = async ({ searchParams }: Props) => {
   const paramId: number = (await searchParams).service ?? 1
 
+  console.log(paramId)
   return (
     <div className="flex flex-col flex-1">
       <HeaderBg />
