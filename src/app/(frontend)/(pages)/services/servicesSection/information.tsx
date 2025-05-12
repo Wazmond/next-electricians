@@ -6,7 +6,7 @@ import React from 'react'
 
 const ServiceInformation = ({ docs }: { docs: Service[] }) => {
   const searchParams = useSearchParams()
-  const serviceId = Number(searchParams.get('service') ?? 1)
+  const serviceId = Number(searchParams.get('service') ?? 1) - 1
   return (
     <div
       style={{
