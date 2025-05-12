@@ -8,7 +8,7 @@ import ServicesCard from './servicesCard'
 
 const SearchParamClient = ({ docs }: { docs: Service[] }) => {
   const searchParams = useSearchParams()
-  const serviceParam = Number(searchParams.get('service') ?? 1) - 1
+  const serviceParam = Number(searchParams.get('service') ?? 1)
   return (
     <>
       <div className="relative flex flex-1 flex-row h-min">
@@ -17,12 +17,12 @@ const SearchParamClient = ({ docs }: { docs: Service[] }) => {
             <ServicesCard
               service={service}
               index={index + 1}
-              serviceParam={serviceParam}
+              serviceParam={serviceParam - 1}
               key={index}
             />
           ))}
         </div>
-        <MiddleColumn docs={docs} serviceParam={serviceParam} />
+        <MiddleColumn docs={docs} serviceParam={serviceParam - 1} />
       </div>
       <ServiceInformation docs={docs} serviceParam={serviceParam} />
     </>
