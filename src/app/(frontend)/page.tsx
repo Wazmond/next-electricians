@@ -7,6 +7,7 @@ import Projects from './(pages)/home/projects'
 import HomeServices from './(pages)/home/services'
 import EnquiryForm from '@/components/enquiryForm'
 import { payload } from '@/hooks/payload'
+import { Router } from 'next/router'
 
 const Page = async () => {
   const pageContent = await payload.findGlobal({ slug: 'homePage' })

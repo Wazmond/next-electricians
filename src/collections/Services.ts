@@ -3,7 +3,7 @@ import { CollectionConfig } from 'payload'
 export const Services: CollectionConfig = {
   access: { read: () => true },
   slug: 'services',
-  defaultSort: ['-title'],
+  defaultSort: ['id'],
   fields: [
     {
       name: 'title',

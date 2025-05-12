@@ -23,7 +23,7 @@ export default {
         'mono-800': '#3f3f3f',
         'mono-900': '#2e2e2e',
         logoBlue: '#38b6ff',
-        'light-blue': '#E9F5FC',
+        'light-blue': '#ddf2ff',
         'next-blue': '#37b5ff',
       },
     },
