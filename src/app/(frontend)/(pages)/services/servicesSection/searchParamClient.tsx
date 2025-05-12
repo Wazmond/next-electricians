@@ -17,14 +17,14 @@ const SearchParamClient = ({ docs }: { docs: Service[] }) => {
             <ServicesCard
               service={service}
               index={index + 1}
-              serviceParam={serviceParam - 1}
+              serviceParam={serviceParam}
               key={index}
             />
           ))}
         </div>
-        <MiddleColumn docs={docs} serviceParam={serviceParam - 1} />
+        <MiddleColumn docs={docs} serviceParam={serviceParam} />
       </div>
-      <ServiceInformation docs={docs} serviceParam={serviceParam} />
+      <ServiceInformation docs={docs} serviceParam={serviceParam - 1} />
     </>
   )
 }
