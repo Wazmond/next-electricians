@@ -12,7 +12,7 @@ const ServiceInformation = ({ docs, serviceParam }: Props) => {
   return (
     <div
       style={{
-        borderTopLeftRadius: `${serviceParam == 1 ? '0' : '12px'}`,
+        borderTopLeftRadius: `${serviceParam == 0 ? '0' : '12px'}`,
         borderBottomLeftRadius: `${serviceParam == docs.length ? '0' : '12px'}`,
       }}
       className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
