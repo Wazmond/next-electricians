@@ -15,7 +15,7 @@ const ServiceInformation = ({ docs, serviceParam }: Props) => {
         borderTopLeftRadius: `${serviceParam == 0 ? '0' : '12px'}`,
         borderBottomLeftRadius: `${serviceParam == docs.length ? '0' : '12px'}`,
       }}
-      className="flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
+      className="hidden md:flex flex-1 flex-col items-center bg-white rounded-tr-xl rounded-br-xl rounded-bl-lg p-4 gap-4 z-[2]"
     >
       <div className="relative w-full h-[400px] aspect-auto flex items-center justify-center">
         <Image
