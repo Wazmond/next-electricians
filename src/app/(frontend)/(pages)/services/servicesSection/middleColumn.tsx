@@ -9,7 +9,7 @@ interface Props {
 }
 const MiddleColumn = ({ docs, serviceParam }: Props) => {
   return (
-    <div className="flex flex-col h-auto w-8 bg-white">
+    <div className="hidden md:flex flex-col h-auto w-8 bg-white">
       <span
         style={{ flex: `${serviceParam === 1 ? '0' : `${serviceParam - 1}`}  1 0%` }}
         className={`bg-light-blue rounded-br-2xl transition-all duration-150 ease-out`}
