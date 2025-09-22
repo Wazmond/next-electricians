@@ -12,23 +12,14 @@ interface Props {
 
 const ServicesCard = ({ service, index, serviceParam }: Props) => {
   const [borderRadius, setBorderRadius] = useState<string>('12px')
-  const [vw, setVw] = useState<number>(0)
 
   useEffect(() => {
-    const handleResize = () => {
-      setVw(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  })
-
-  useEffect(() => {
-    if (vw > 768 && serviceParam === index) {
+    if (window.innerWidth > 768 && serviceParam === index) {
       setBorderRadius('12px 0 0 12px')
     } else {
       setBorderRadius('12px')
     }
-  }, [vw, serviceParam, index])
+  }, [serviceParam, index])
 
   return (
     <div
