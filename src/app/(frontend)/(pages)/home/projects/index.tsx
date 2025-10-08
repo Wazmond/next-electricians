@@ -13,11 +13,11 @@ const Projects = ({ pageContent }: Props) => {
       <h2 className="font-robotoSerif">{pageContent.projectsTitle}</h2>
       <p>{pageContent.projectsText}</p>
       <ProjectsComponent />
-      <CTAButton
+      {/* <CTAButton
         href="/projects"
         text="View More"
         className="bg-white hover:bg-mono-300 text-black border border-mono-500"
-      />
+      /> */}
     </>
   )
 }

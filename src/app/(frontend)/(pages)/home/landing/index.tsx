@@ -36,7 +36,7 @@ const LandingImage = ({ pageContent }: Props) => {
             text="Get In Touch Now"
           />
           <CTAButton
-            href="/projects"
+            href="#projects"
             className="border-white hover:bg-[rgba(255,255,255,0.3)] border-2 text-white"
             text="View Projects"
           />

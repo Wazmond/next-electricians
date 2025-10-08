@@ -23,7 +23,10 @@ const Page = async () => {
       <section className="w-full h-auto bg-mono-200 flex relative justify-center text-black py-8 px-8">
         <HomeServices pageContent={pageContent} />
       </section>
-      <section className="gap-6 py-8 flex flex-col self-center w-full items-center max-w-[1178px] px-8">
+      <section
+        className="gap-6 py-8 flex flex-col self-center w-full items-center max-w-[1178px] px-8 scroll-mt-[80px]"
+        id="projects"
+      >
         <Projects pageContent={pageContent} />
       </section>
       <EnquiryForm text={pageContent.enquiryTitle} buttonText="Enquire now!" />
