@@ -46,7 +46,7 @@ const Header = () => {
 
   return (
     <>
-      <div
+      {/* <div
         className={`fixed z-[8] ${menuState ? 'h-full' : 'h-0'} w-screen transition-colors duration-150 ease-in-out`}
         style={{ backgroundColor: `rgba(0, 0, 0, ${menuState ? '0.7' : '0'}` }}
       >
@@ -67,10 +67,10 @@ const Header = () => {
             <Socials size={25} base={'text-black'} hovered={'hover:text-mono-500'} />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
-        className={`fixed z-10 flex flex-row h-20 w-full justify-between items-center md:justify-evenly px-5`}
+        className={`fixed z-10 flex flex-row h-20 w-full justify-between items-center md:justify-between px-5`}
         style={{ backgroundColor: `rgba(46, 46, 46, ${menuState ? '0' : bgState}` }}
         ref={menuRef}
       >
@@ -83,7 +83,7 @@ const Header = () => {
             priority={true}
           />
         </Link>
-        <div
+        {/* <div
           className="hidden md:flex h-16 gap-8 text-lg tracking-widest align-middle font-robotoSerif"
           style={{ color: 'var(--header-text-color)' }}
         >
@@ -92,13 +92,13 @@ const Header = () => {
           <HeaderButtons title="Services" page="services" />
           <HeaderButtons title="Projects" page="projects" />
           <HeaderButtons title="Contact" page="contact" />
-        </div>
+        </div> */}
 
-        <div className="hidden md:flex flex-row gap-5 h-12 items-center">
+        <div className="flex flex-row gap-5 h-12 items-center">
           <Socials size={24} base={'text-white'} hovered={'hover:text-mono-500'} />
         </div>
 
-        <button
+        {/* <button
           className={`${!menuState && 'md:hidden'} flex flex-col h-12 w-12 py-3 px-2 justify-between group hover:cursor-pointer`}
           aria-label="MenuButton"
           onClick={() => setMenuState(!menuState)}
@@ -112,7 +112,7 @@ const Header = () => {
           <span
             className={`${menuState ? 'bg-black' : 'bg-white'} h-0.5 w-8 transition-all ${menuState ? '-rotate-45 -translate-y-2.5' : ''}`}
           />
-        </button>
+        </button> */}
       </div>
     </>
   )
