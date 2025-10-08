@@ -11,10 +11,17 @@ const Page = async () => {
       <HeaderBg />
       <span className="w-full h-16" />
       <div className="w-full max-w-[1178px] self-center p-8 flex flex-col gap-4 text-center">
-        <h1>{pageContent?.title}</h1>
-        <p className="text-center">{pageContent?.text}</p>
-        <p className="text-center">{"Have a project in mind? Big or small, we're ready to help bring it to life."}</p>
-        <p className="text-center"><Link href={"/contact"} className={'text-blue-800'}>Contact us</Link> to get started</p>
+        {/*<h1>{pageContent?.title}</h1>*/}
+        {/*<p className="text-center">{pageContent?.text}</p>*/}
+        <p className="text-center">
+          {"Have a project in mind? Big or small, we're ready to help bring it to life."}
+        </p>
+        <p className="text-center">
+          <Link href={'/contact'} className={'text-blue-800'}>
+            Contact us
+          </Link>{' '}
+          to get started
+        </p>
         <ProjectsComponent />
       </div>
     </div>
