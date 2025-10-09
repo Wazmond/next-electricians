@@ -388,7 +388,6 @@ export const home_page = pgTable(
         onDelete: 'set null',
       }),
     aboutText: varchar('about_text').notNull(),
-    aboutRichText: jsonb('about_rich_text').notNull(),
     servicesTitle: varchar('services_title').notNull(),
     servicesText: varchar('services_text').notNull(),
     projectsTitle: varchar('projects_title').notNull(),
@@ -602,7 +601,7 @@ type DatabaseSchema = {
   relations_projects_page: typeof relations_projects_page
 }
 
-declare module '@payloadcms/db-vercel-postgres/types' {
+declare module '@payloadcms/db-vercel-postgres' {
   export interface GeneratedDatabaseSchema {
     schema: DatabaseSchema
   }
