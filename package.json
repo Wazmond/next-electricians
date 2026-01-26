@@ -35,7 +35,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
-    "next": "^15.5.4",
+    "next": "15.5.9",
     "nodemailer": "^6.10.0",
     "payload": "^3.59.1",
     "react": "19.0.0-rc-66855b96-20241106",
